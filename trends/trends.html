@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Trends</title>
+    <link rel="stylesheet" href="trends.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+   <!-- Header Section -->
+   <header>
+    <input type="checkbox" name="" id="check">
+    <label for="check" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+    <h1 class="logo">
+      <a href="/index.html">
+          <img src="/images/malika.jpg" alt="logo">
+      </a>
+    </h1>
+    <nav>
+        <a href="/index.html">Home</a>
+        <a href="/fashionNews/fashionNews.html">News</a>
+        <a href="/trends/trends.html">Trends</a>
+        <a href="/shop/indexshop.html">Shops</a>
+    </nav>
+    <a href="/SignIn/signIn.html" class="btn" id="sign-up-btn">
+        <i class="fas fa-user"></i> Sign In
+    </a>
+  </header>
+
+    <div class="container">
+        <h2>Stay Inspired</h2>
+        <h3>Your fashion journey begins here</h3>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Looking for something ?">
+            <button id="search-btn" type="submit"><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="grid-container">
+            <a href="/trends/autumn/autumn.html" class="grid-item" data-category="autumn">
+                <img src="/images/trends/autumn/autumn1.jpg" alt="Autumn">
+                <div class="overlay">
+                    <h3>Autumn</h3>
+                    <p>A season of rich colors, cozy textures, <br> and a shift in style.</p>
+                </div>
+            </a>
+
+            <a href="/trends/summer/summer.html" class="grid-item" data-category="summer">
+                <img src="/images/trends/summer/summer2.jpg" alt="Summer">
+                <div class="overlay">
+                    <h3>Summer</h3>
+                    <p>With the summer heat looming large, <br> cooler clothing is a must.</p>
+                </div>
+            </a>
+
+            <a href="/trends/spring/spring.html" class="grid-item" data-category="spring">
+                <img src="/images/trends/spring/spring1.jpg" alt="Spring">
+                <div class="overlay">
+                    <h3>Spring</h3>
+                    <p>Spring brings a breath of fresh air with <br> gentle breezes and flowers.</p>
+                </div>
+            </a>
+
+            <a href="/trends/winter/winter.html" class="grid-item" data-category="winter">
+                <img src="/images/trends/winter/winter1.jpg" alt="Winter">
+                <div class="overlay">
+                    <h3>Winter</h3>
+                    <p>Winter arrives, bringing with it crisp <br> apples and cozy fashion.</p>
+                </div>
+            </a>
+        </div>        
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Lifestyle Website. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script>
+        
+        document.getElementById('search-btn').addEventListener('click', function() {
+        const searchInput = document.getElementById('search-input').value.toLowerCase();
+        const gridItems = document.querySelectorAll('.grid-item');
+
+        gridItems.forEach(item => {
+            item.style.display = 'none';
+        });
+
+        gridItems.forEach(item => {
+         const category = item.getAttribute('data-category').toLowerCase();
+         const title = item.querySelector('h3').textContent.toLowerCase();
+            const description = item.querySelector('p').textContent.toLowerCase();
+
+            if (category.includes(searchInput) || title.includes(searchInput) || description.includes(searchInput)) {
+                item.style.display = 'block'; 
+            }
+        });
+
+        if (!Array.from(gridItems).some(item => item.style.display === 'block')) {
+            alert('No trends found for "' + searchInput + '". Please try again.');
+        }
+    });
+    
+    document.getElementById('search-input').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            document.getElementById('search-btn').click(); 
+        }
+    });
+    </script>
+    <script>
+        window.onload = function() {
+            var currentPath = window.location.pathname;
+            var navLinks = document.querySelectorAll('nav a');
+    
+            navLinks.forEach(function(link) {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        </script>
+</body>
+</html>

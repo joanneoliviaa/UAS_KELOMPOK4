@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="fashionNews.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <input type="checkbox" name="" id="check">
+        <label for="check" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+        <h1 class="logo">
+          <a href="/index.html">
+              <img src="/images/malika.jpg" alt="logo">
+          </a>
+        </h1>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/fashionNews/fashionNews.html">News</a>
+            <a href="/trends/trends.html">Trends</a>
+            <a href="/shop/indexshop.html">Shops</a>
+        </nav>
+        <a href="/SignIn/signIn.html" class="btn" id="sign-up-btn">
+            <i class="fas fa-user"></i> Sign In
+        </a>
+      </header>
+
+    <section class="news-section">
+        <div class="container">
+            <!-- Dropdown untuk Sort By -->
+            <div class="sort-container">
+                <button class="sort-button">Sort By Title</button>
+                <div class="dropdown-content">
+                    <a href="#" id="sort-asc">A-Z</a>
+                    <a href="#" id="sort-desc">Z-A</a>
+                </div>
+            </div>
+
+            <div class="grid-container">
+                <article class="news-item">
+                    <img src="/images/articles/art1.jpeg" alt="Best Front Row Style From New York Fashion Week">
+                    <h3><a href="/articles/art1.html">Best Front Row Style From New York Fashion Week</a></h3>
+                    <h4>By Christian Allaire</h4>
+                </article>
+                <article class="news-item">
+                    <img src="/images/articles/art2.jpg" alt="My (Brief) Life as a Show Dog for Rachel Antonoff and Susan Alexandra">
+                    <h3><a href="/articles/art2.html">My (Brief) Life as a Show Dog for Rachel Antonoff and Susan Alexandra</a></h3>
+                    <h4>By Magnolia</h4>
+                </article>
+                <article class="news-item">
+                    <img src="/images/articles/art3.jpg" alt="Ouch, My Back! The Worst Trend at NYFW Is the Backless Benches">
+                    <h3><a href="/articles/art3.html">Ouch, My Back! The Worst Trend at NYFW Is the Backless Benches</a></h3>
+                    <h4>By Christian Allaire</h4>
+                </article>
+                <article class="news-item">
+                    <img src="/images/articles/art4.jpg" alt="All Aboard the U.S.S. SNL for Tommy Hilfiger">
+                    <h3><a href="/articles/art4.html">All Aboard the U.S.S. SNL for Tommy Hilfiger</a></h3>
+                    <h4>By Hannah Jackson</h4>
+                </article>
+                <article class="news-item">
+                    <img src="/images/articles/art5.jpg" alt="How Editors, Models and More Styled Their White Tees at the Fashion for Our Future March">
+                    <h3><a href="/articles/art5.html">How Editors, Models and More Styled Their White Tees at the Fashion for Our Future March</a></h3>
+                    <h4>By Leah Faye Cooper</h4>
+                </article>
+                <article class="news-item">
+                    <img src="/images/articles/art6.jpg" alt="Reiss launches collaboration with Les 100 Ciels">
+                    <h3><a href="/articles/art6.html">Reiss launches collaboration with Les 100 Ciels</a></h3>
+                    <h4>By Danielle Wightman-Stone</h4>
+                </article>
+                <article class="news-item">
+                    <img src="/images/articles/art7.jpg" alt="Trendstop Spring Summer 2025 Milan Fashion Week Overview">
+                    <h3><a href="/articles/art7.html">Trendstop Spring Summer 2025 Milan Fashion Week Overview</a></h3>
+                    <h4>By Trendstop</h4>
+                </article>    
+                <article class="news-item">
+                    <img src="/images/articles/art8.png" alt="Klarna and Angel City FC collaborate with Hija de tu Madre">
+                    <h3><a href="/articles/art8.html">Klarna and Angel City FC Collaborate With Hija de tu Madre</a></h3>
+                    <h4>By Danielle Wightman-Stone</h4>
+                </article>    
+                <article class="news-item">
+                    <img src="/images/articles/art9.jpg" alt="WGSN's Lisa White talks consumer and business trends in 2026, the year of reorientation">
+                    <h3><a href="/articles/art9.html">WGSN's Lisa White Talks Consumer And Business Trends in 2026, The Year of Reorientation</a></h3>
+                    <h4>By Florence Julienne</h4>    
+                </article>
+                <article class="news-item">
+                    <img src="/images/articles/art10.jpg" alt="Fashion industry unveils financing scheme for cotton decarbonisation">
+                    <h3><a href="/articles/art10.html">Fashion Industry Unveils Financing Scheme For Cotton Decarbonisation</a></h3>
+                    <h4>By Don-Alvin Adegeest</h4>
+                </article>
+                <article class="news-item">
+                    <img src="/images/articles/art11.jpg" alt="Alzheimer's socks: Dutch designer draws attention to the disease">
+                    <h3><a href="/articles/art11.html">Alzheimer's Socks: Dutch Designer Draws Attention to The Disease</a></h3>
+                    <h4>By Caitlyn Terra</h4>
+                </article>  
+                <article class="news-item">
+                    <img src="/images/articles/art12.jpg" alt="Levi’s teases collaboration with Beyoncé">
+                    <h3><a href="/articles/art12.html">Levi’s Teases Collaboration With Beyoncé</a></h3>
+                    <h4>By Rachel Douglass</h4>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Lifestyle Website. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="fashionNews.js"></script>
+</body>
+</html>

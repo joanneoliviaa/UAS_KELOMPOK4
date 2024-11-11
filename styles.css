@@ -1,0 +1,607 @@
+/* Base Styles */
+:root {
+    --primary-color: #725b36;
+    --secondary-color: #1e1e1e;
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --heading-color: rgb(121, 76, 14);
+    --font-primary: 'Helvetica Neue', sans-serif;
+    --font-size-base: 1rem;
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+    --hover-colour: #ad8d59;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+
+.logo img {
+    height: 40px; 
+    width: 140px; 
+    display: block; 
+  }
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #000;
+    position: relative; 
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 2px;
+    background-color: var(--hover-colour); 
+    bottom: -5px;
+    left: 0;
+    transition: width var(--transition-speed) ease; 
+}
+
+nav a.active::after, 
+nav a:hover::after {
+    width: 100%;
+}
+
+
+#sign-up-btn {
+    background: white;
+    color: rgb(4, 4, 4);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background var(--transition-speed) ease;
+}
+
+#sign-up-btn:hover {
+    background-color: rgba(198, 196, 196, 0.237);
+}
+
+/* Hero section styles */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 100%; 
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.slide.active {
+    left: 0;
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+}
+
+.pagination-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5); 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.active-dot {
+    background-color: #fff; 
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    }
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}  
+
+/* Trend */
+.featured {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.featured h2 {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    color: var(--heading-color);
+}
+
+.articles {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.article {
+    width: 23%;
+    margin-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: transform var(--transition-speed) ease;
+}
+
+.article:hover {
+    transform: translateY(-10px);
+}
+
+.article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.article h3 {
+    font-size: 1.8rem;
+    margin: 15px 10px;
+}
+
+.article h3 a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-speed) ease;
+}
+
+.article h3 a:hover {
+    color: var(--hover-colour);
+}
+
+.article p {
+    font-size: var(--font-size-base);
+    margin: 10px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.read-more-container {
+    margin-top: 7px;
+    text-align: center;
+}
+
+.read-more-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: background-color var(--transition-speed) ease;
+    white-space: nowrap;
+}
+
+.read-more-btn:hover {
+    background-color: var(--hover-colour);
+}
+
+/* Latest News Section */
+.latest-news {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.latest-news h2 {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    color: var(--heading-color);
+}
+
+.news-articles {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+}
+
+.news-article {
+    width: 23%;
+    flex: 0 0 auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: transform var(--transition-speed) ease;
+}
+
+.news-article:hover {
+    transform: translateY(-10px);
+}
+
+.news-article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-article h3 {
+    font-size: 1.8rem;
+    margin: 15px 10px;
+}
+
+.news-article p {
+    font-size: var(--font-size-base);
+    margin: 10px;
+    color: #555;
+}
+
+.news-article h3 {
+    font-size: 1.5em;
+    margin: 20px 15px 10px;
+    color: #333;
+}
+
+.news-article h3 a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-speed) ease;
+}
+
+.news-article h3 a:hover {
+    color: var(--hover-colour);
+}
+
+.news-article h4 {
+    font-size: 1em;
+    color: #888;
+    margin: 0 15px 20px;
+}
+
+.news-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.slider-btn {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn, .next-btn {
+    position: static;
+    margin: 0 10px;
+}
+
+.prev-btn {
+    order: -1;
+}
+
+/* Shop Section */
+.hero1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/hero/hero4.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 200px;
+    margin-bottom: 75px;
+    transition: transform var(--transition-speed) ease;
+}
+
+.hero1:hover {
+    transform: translateY(-10px);
+}
+
+.hero1 h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero1 p {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+}
+
+.hero1 button {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.hero1 button:hover {
+    background-color: var(--hover-colour);
+}
+
+.hero1 button a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-speed) ease;
+}
+
+/* Newsletter Section */
+.newsletter {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.newsletter h2 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+}
+
+.newsletter p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.newsletter input {
+    padding: 10px;
+    font-size: 1.1rem;
+    width: 300px;
+    border-radius: var(--border-radius);
+    border: none;
+    margin-right: 10px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: background-color var(--transition-speed) ease;
+}
+
+.newsletter button:hover {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+/* Footer Section */
+footer {
+    padding: 30px 20px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 15px;
+}
+
+footer .social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+footer .social-media a:hover {
+    color: var(--hover-colour);
+}
+
+/*burger bar*/
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ nav {
+    left: 0;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        font-weight:lighter;
+        position: absolute;
+        left: -100%;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background-color: #f3f3f3;
+        padding: 20px;
+        transition: var(--transition-speed) ease;
+        opacity: 0;
+    }
+
+    header nav a {
+        display: block;
+        text-align: left;
+        padding: 10px;
+        margin-top: 30px;
+        font-size: 20px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    header nav a:last-child {
+        border-bottom: none;
+    }
+
+    header nav a:hover {
+        display: block;
+        text-align: left;
+        padding: 10px;
+        margin-top: 30px;
+        font-size: 20px;
+        background-color: #dadada6a;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    label {
+        display: block;
+    }
+}
+
+/* Trends */
+@media (max-width: 768px) {
+    .article {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .article {
+        width: 90%;
+    }
+}
+
+/* News Articles */
+@media (max-width: 768px) {
+    .news-article {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-article {
+        width: 90%;
+    }
+}
+
+/* News Letter */
+@media (max-width: 768px) {
+    .newsletter form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter input {
+        width: 75%;
+        margin-right: 0;
+    }
+
+    .newsletter button {
+        width: 50%;
+        margin-top: 25px;
+    }
+}
