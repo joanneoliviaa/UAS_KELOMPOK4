@@ -9,27 +9,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <!-- Header Section -->
-    <header>
-      <input type="checkbox" name="" id="check">
-      <label for="check" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
-      <h1 class="logo">
-        <a href="/index.html">
-            <img src="/img/malika.jpg" alt="logo">
-        </a>
-      </h1>
-      <nav>
-          <a href="/index.html">Home</a>
-          <a href="/fashionNews/fashionNews.html">News</a>
-          <a href="/trends/trends.html">Trends</a>
-          <a href="/shop/indexshop.html">Shops</a>
-      </nav>
-      <a href="/SignIn/signIn.html" class="btn" id="sign-up-btn">
-          <i class="fas fa-user"></i> Sign In
-      </a>
-    </header>
-
+    <%- include('partials/header') %>
+    
     <section class="hero">
         <!-- Left and right controls -->
         <div class="slider">

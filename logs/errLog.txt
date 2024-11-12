@@ -1,0 +1,445 @@
+20241112	19:26:34	ed25ee8c-69be-4d7d-9cff-e0f997dc54f1	Error: ENOENT: no such file or directory, stat 'D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.html'
+20241112	19:27:24	4e140abf-dce8-4b79-96cf-9abbfd9fc313	Error: ENOENT: no such file or directory, stat 'D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.html'
+20241112	19:27:27	9a6fc25a-77a0-410d-8573-7ab61efc958c	Error: ENOENT: no such file or directory, stat 'D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.html'
+20241112	19:34:13	38c13ccb-5b23-4fc9-85b2-b62503dcc243	SyntaxError: Unexpected identifier 'partials' in D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+20241112	19:35:30	2de0f991-ccf7-4565-8496-d5b2e4d5086b	SyntaxError: Unexpected identifier 'partials' in D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+20241112	19:35:30	849cd613-6fd1-4ef0-988c-54e561f83e5e	SyntaxError: Unexpected identifier 'partials' in D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+20241112	19:35:31	a34984bf-6f45-4f4f-b5c0-7f5096bf9e2d	SyntaxError: Unexpected identifier 'partials' in D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+20241112	19:35:31	99aca915-43e0-411a-b24d-638e955043e6	SyntaxError: Unexpected identifier 'partials' in D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+20241112	19:35:31	bfbc3a57-a889-4ccb-9625-87bc8e2d2e2b	SyntaxError: Unexpected identifier 'partials' in D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+20241112	19:35:31	40071e43-8fb0-4bad-afce-8817d782dd0e	SyntaxError: Unexpected identifier 'partials' in D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+20241112	19:35:31	05bf8e0d-100e-4e07-a51f-784f173cc723	SyntaxError: Unexpected identifier 'partials' in D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+20241112	19:35:33	cb66c176-cec9-4b9b-8b95-960338bb9ffa	SyntaxError: Unexpected identifier 'partials' in D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+20241112	19:37:14	fafc3e62-9476-43c1-bb6f-33f618cf2cf3	SyntaxError: Unexpected identifier 'partials' in D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+20241112	19:37:14	5968927d-f769-4dec-ac95-9d58e6e5b62a	SyntaxError: Unexpected identifier 'partials' in D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+20241112	19:46:21	280ae7d0-543a-475b-87b9-a00363a44679	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
+20241112	19:47:46	271d58c0-3821-4aa6-921e-587b4006a7a0	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:47:46	2ddeffec-ab92-4ddd-b60d-2f1fa0097353	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:47:47	e561401b-4fcc-4ca4-b0be-98df33f49230	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:47:47	c72ac8d6-0667-4736-826d-3882416da7da	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:47:47	a51da3e0-af67-4810-96d8-b7ab5db3d660	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:47:48	d18e85ab-2afa-4279-b6ee-c61b11471ad4	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:47:50	bf85e8b4-e44a-426f-9ad7-434b804eb5fc	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:49:40	192f0084-ce30-4ab7-988d-e71a054e64b7	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:49:43	8f73ece0-195f-467a-9a6b-d89996572114	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:51:04	2dcfb971-9967-4c0e-8007-25635db3aadc	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:51:04	21f732e1-ef45-4867-a0e9-684fa166a736	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:51:04	178b1dd8-e803-45df-9a3e-7351c2c4a284	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:51:05	00e5e30f-1cea-4d96-b8a9-8b9c65255c98	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:51:07	de90430a-b25e-4ca4-b6db-8012187abdaa	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:51:08	a06e46fd-ee10-4252-b98c-a00fb0f7b3aa	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:51:08	8de261d6-09e5-47f6-b28e-66a8c8ce3f72	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:51:29	9039b3e1-84f0-4c91-881d-30b0848756d8	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:54:08	bf27c14d-64f3-4a83-ac1e-7b8ede4e3f8b	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:54:11	09a6933f-2f7c-4945-a290-2424873faab5	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:54:37	66005fa3-aa0b-4eb1-84be-774a1af01fdf	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:54:39	deec052d-cd03-442d-89e4-7fa277d80e08	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:54:39	75d35a1e-b066-419e-beb8-976dbfa09d26	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:57:46	c32dfb0a-3c97-4c91-8209-9b4fc023bd74	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:58:07	cbd8484c-0d4a-45d8-9939-d08d6086463e	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     <div class="container">
+    16|         <h2>Stay Inspired</h2>
+    17|         <h3>Your fashion journey begins here</h3>
+
+Could not find the include file "partials/header"
+20241112	19:58:39	3c0fa0fd-4720-4842-b9ac-2d57a1b53553	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15| 
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
+20241112	19:58:40	5df7a255-1822-4c7e-a07d-19fafa2d4e45	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15| 
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
+20241112	19:58:40	376682fd-0cdb-4b32-b8eb-f685641bb508	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15| 
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
+20241112	19:58:41	bf8f8689-a752-44ae-a8bc-afb44c0aa5fc	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15| 
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
+20241112	19:58:41	a14d92b5-f1d7-452c-b9b6-c75032f4ddfc	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15| 
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
+20241112	19:58:42	ead70b28-3748-4297-9a15-f438a931e55f	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15| 
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
+20241112	19:58:43	63aea00f-7210-4851-a5c9-8140276a0191	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15| 
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
+20241112	19:58:43	c75241fc-080d-49d4-85c5-fbdc1f7bfd27	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15| 
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
+20241112	19:58:43	d499cd27-19d5-4112-a403-ca97316d8b37	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15| 
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
+20241112	19:58:43	375f3227-fc45-4530-b8ba-98f0d80c2b8c	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15| 
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
+20241112	19:58:43	9822ab29-9691-420d-a38e-597c9553a7c1	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15| 
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
+20241112	19:58:43	f2908d63-982d-45d8-85e1-1f3a16b6e966	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15| 
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
+20241112	19:58:43	692e20f8-9731-42b4-8fa0-ebd7c9d6f1ce	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15| 
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
+20241112	19:59:32	cfa9d3af-1b41-4b65-8c45-348d47dccd42	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15| 
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
+20241112	19:59:32	bb09f74f-d165-4174-86ea-c65254e90142	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15| 
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
+20241112	19:59:32	20537c15-df2c-4060-a703-b00c8bf9f707	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15| 
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
+20241112	19:59:32	bf7b2fa7-d70e-488b-80bf-1d0d428dba8d	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15| 
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
+20241112	19:59:49	f3bee0d8-0f03-4a4c-9508-ee824734b338	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15| 
+    16|     <div class="container">
+    17|         <h2>Stay Inspired</h2>
+
+Could not find the include file "partials/header"
