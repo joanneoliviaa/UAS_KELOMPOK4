@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+      <input type="checkbox" name="" id="check">
+      <label for="check" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+      <h1 class="logo">
+        <a href="/index.html">
+            <img src="/img/malika.jpg" alt="logo">
+        </a>
+      </h1>
+      <nav>
+          <a href="/index.html">Home</a>
+          <a href="/fashionNews/fashionNews.html">News</a>
+          <a href="/trends/trends.html">Trends</a>
+          <a href="/shop/indexshop.html">Shops</a>
+      </nav>
+      <a href="/SignIn/signIn.html" class="btn" id="sign-up-btn">
+          <i class="fas fa-user"></i> Sign In
+      </a>
+    </header>
+
+    <section class="hero">
+        <!-- Left and right controls -->
+        <div class="slider">
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <img src="/img/hero/hero1.jpg" alt="Slide 1">
+                <div class="hero-content">
+                    <h1>Welcome to MALIKA Fashion Style</h1>
+                    <p>Best Inspirations for a Healthy Life and Current Trends.</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="/img/hero/hero2.jpg" alt="Slide 2">
+                <div class="hero-content">
+                    <h1>Discover the Latest Trends</h1>
+                    <p>Stay ahead with the hottest fashion.</p>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="/img/hero/hero3.png" alt="Slide 3">
+                <div class="hero-content">
+                    <h1>Exclusive Collection Just For You</h1>
+                    <p>Shop now and upgrade your wardrobe.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Left and right controls -->
+        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+        <a class="next" onclick="moveSlide(1)">&#10095;</a>
+    
+        <!-- Pagination Dots -->
+        <div class="pagination-dots">
+            <span class="dot active-dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+  
+    <!--Trend -->
+    <section class="featured">
+        <h2>Get the look</h2>
+        <div class="articles">
+            <div class="article">
+                <img src="/img/trends/summer/summer1.png" alt="Fashion">
+                <h3><a href="trends/summer/summer.html">Summer</a></h3>
+                <p>With the summer heat looming large, cooler clothing is a must.</p>
+            </div>
+
+            <div class="article">
+                <img src="/img/trends/autumn/autumn8.jpg" alt="Health">
+                <h3><a href="trends/autumn/autumn.html">Autumn</a></h3>
+                <p>A season of rich colors, cozy textures, and a shift in style.</p>
+            </div>
+
+            <div class="article">
+                <img src="/img/trends/spring/spring2.png" alt="Travel">
+                <h3><a href="trends/spring/spring.html">Spring</a></h3>
+                <p>Spring brings a breath of fresh air with gentle breezes and flowers.</p>
+            </div>
+
+            <div class="article">
+                <img src="/img/trends/winter/winter8.png" alt="Food">
+                <h3><a href="trends/winter/winter.html">Winter</a></h3>
+                <p>Winter arrives, bringing with it crisp apples and cozy fashion. </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lastest news -->
+    <section class="latest-news">
+        <h2>NEWS SECTION</SECtion></h2>
+        <div class="news-slider">
+            <button class="slider-btn prev-btn">❮</button>
+            <div class="news-articles">
+                <div class="news-article">
+                    <img src="/img/articles/art1.jpeg" alt="Best Front Row Style From New York Fashion Week">
+                    <h3><a href="/articles/art1.html">Best Front Row Style From New York Fashion Week</a></h3>
+                    <h4>By Christian Allaire</h4>
+                </div>
+
+                <div class="news-article">
+                <img src="/img/articles/art2.jpg" alt="My (Brief) Life as a Show Dog for Rachel Antonoff and Susan Alexandra">
+                <h3><a href="/articles/art2.html">My (Brief) Life as a Show Dog for Rachel Antonoff and Susan Alexandra</a></h3>
+                <h4>By Magnolia</h4>
+                </div>
+
+                <div class="news-article">
+                <img src="/img/articles/art3.jpg" alt="Ouch, My Back! The Worst Trend at NYFW Is the Backless Benches">
+                <h3><a href="/articles/art3.html">Ouch, My Back! The Worst Trend at NYFW Is the Backless Benches</a></h3>
+                <h4>By Christian Allaire</h4>
+                </div>
+
+                <div class="news-article">
+                <img src="/img/articles/art4.jpg" alt="All Aboard the U.S.S. SNL for Tommy Hilfiger">
+                <h3><a href="/articles/art4.html">All Aboard the U.S.S. SNL for Tommy Hilfiger</a></h3>
+                <h4>By Hannah Jackson</h4>
+                </div>
+
+                <div class="news-article">
+                    <img src="/img/articles/art5.jpg" alt="How Editors, Models and More Styled Their White Tees at the Fashion for Our Future March">
+                    <h3><a href="/articles/art5.html">How Editors, Models and More Styled Their White Tees at the Fashion for Our Future March</a></h3>
+                    <h4>By Leah Faye Cooper</h4>
+                </div>
+
+                <div class="news-article">
+                    <img src="/img/articles/art6.jpg" alt="Reiss launches collaboration with Les 100 Ciels">
+                    <h3><a href="/articles/art6.html">Reiss launches collaboration with Les 100 Ciels</a></h3>
+                    <h4>By Danielle Wightman-Stone</h4>
+                </div>
+
+                <div class="read-more-container">
+                    <a href="/fashionNews/fashionNews.html" class="read-more-btn">Read More ❯</a>
+                </div>
+            </div>
+            <button class="slider-btn next-btn">❯</button>
+        </div>
+
+    </section>  
+    
+    <!-- Shop -->
+    <section class="hero1">
+        <div class="hero1-content">
+            <h1>Grab yours now!</h1>
+            <p>See our collection here</p>
+            <button><a href="/shop/indexshop.html">Shop</a></button>
+        </div>
+    </section>
+    
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <h2>Subscribe to the Latest Articles</h2>
+        <p>Get the latest updates directly to your email!</p>
+        <form id="newsletterForm">
+            <input type="email" id="email" placeholder="Masukkan email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Lifestyle Website. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
