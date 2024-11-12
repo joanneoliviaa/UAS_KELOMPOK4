@@ -443,3 +443,112 @@ Could not find the include file "partials/header"
     17|         <h2>Stay Inspired</h2>
 
 Could not find the include file "partials/header"
+20241112	21:30:33	d6d03602-624f-4f3b-9579-d9c7a2e96a9a	Error: Failed to lookup view "trends/autumn" in views directory "D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views"
+20241112	21:33:33	70f3f713-52d5-4f7a-a44f-a678cf1cfcb6	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:12
+    10| </head>
+    11| <body>
+ >> 12|     <%- include('../partials/header') %>
+    13| 
+    14|     <!--Back Button-->
+    15|     <a href="/trends/trends.html" class="circle-btn">
+
+Could not find the include file "../partials/header"
+20241112	21:33:42	60cca1b4-b4ba-4eaf-92e0-36fd287738e1	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:12
+    10| </head>
+    11| <body>
+ >> 12|     <%- include('../partials/header') %>
+    13| 
+    14|     <!--Back Button-->
+    15|     <a href="/trends/trends.html" class="circle-btn">
+
+Could not find the include file "../partials/header"
+20241112	21:33:44	fd4c322c-be79-4147-9f45-e42f9e39cc5d	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:12
+    10| </head>
+    11| <body>
+ >> 12|     <%- include('../partials/header') %>
+    13| 
+    14|     <!--Back Button-->
+    15|     <a href="/trends/trends.html" class="circle-btn">
+
+Could not find the include file "../partials/header"
+20241112	21:33:47	472f64c1-db66-4fff-b93b-b129eda6d808	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:12
+    10| </head>
+    11| <body>
+ >> 12|     <%- include('../partials/header') %>
+    13| 
+    14|     <!--Back Button-->
+    15|     <a href="/trends/trends.html" class="circle-btn">
+
+Could not find the include file "../partials/header"
+20241112	21:33:48	6c1b90a8-cb5f-40bc-8530-1cf66b76c766	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:12
+    10| </head>
+    11| <body>
+ >> 12|     <%- include('../partials/header') %>
+    13| 
+    14|     <!--Back Button-->
+    15|     <a href="/trends/trends.html" class="circle-btn">
+
+Could not find the include file "../partials/header"
+20241112	21:33:49	bae8b267-427d-41c3-93cd-cbf37b554fa8	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:12
+    10| </head>
+    11| <body>
+ >> 12|     <%- include('../partials/header') %>
+    13| 
+    14|     <!--Back Button-->
+    15|     <a href="/trends/trends.html" class="circle-btn">
+
+Could not find the include file "../partials/header"
+20241112	21:34:49	87275bc9-464f-48c0-82da-6f73d95a062f	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:12
+    10| </head>
+    11| <body>
+ >> 12|     <%- include('../partials/header') %>
+    13| 
+    14|     <!--Back Button-->
+    15|     <a href="/trends/trends.html" class="circle-btn">
+
+Could not find the include file "../partials/header"
+20241112	21:34:49	f8905010-700d-453c-9e15-f807dd4db0c8	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:12
+    10| </head>
+    11| <body>
+ >> 12|     <%- include('../partials/header') %>
+    13| 
+    14|     <!--Back Button-->
+    15|     <a href="/trends/trends.html" class="circle-btn">
+
+Could not find the include file "../partials/header"
+20241112	21:34:49	2779cbcd-2d7a-4265-a5d1-3cbe95cddd91	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:12
+    10| </head>
+    11| <body>
+ >> 12|     <%- include('../partials/header') %>
+    13| 
+    14|     <!--Back Button-->
+    15|     <a href="/trends/trends.html" class="circle-btn">
+
+Could not find the include file "../partials/header"
+20241112	21:34:49	932a9edf-8178-48fe-a472-7309f7fd47b3	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:12
+    10| </head>
+    11| <body>
+ >> 12|     <%- include('../partials/header') %>
+    13| 
+    14|     <!--Back Button-->
+    15|     <a href="/trends/trends.html" class="circle-btn">
+
+Could not find the include file "../partials/header"
+20241112	21:34:52	084690e7-d369-45b3-a69e-189cc382e9e7	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:16
+    14| <body ng-controller="FashionTrendsController">
+    15| 
+ >> 16|     <%- include('../../partials/header') %>
+    17| 
+    18|     <div class="container mt-5">
+    19|         <h2 class="text-center">Stay Inspired</h2>
+
+Could not find the include file "../../partials/header"
+20241112	21:35:01	a5b68f24-1110-41ed-a063-43037f180cbf	Error: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:12
+    10| </head>
+    11| <body>
+ >> 12|     <%- include('../partials/header') %>
+    13| 
+    14|     <!--Back Button-->
+    15|     <a href="/trends/trends.html" class="circle-btn">
+
+Could not find the include file "../partials/header"

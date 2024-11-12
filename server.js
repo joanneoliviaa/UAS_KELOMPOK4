@@ -37,6 +37,10 @@ app.get('/trends', (req, res) => {
     res.render('trends/trends');  
 });
 
+app.get('/trends/autumn', (req, res) => {
+    res.render('trends/autumn/autumn'); 
+});
+
 app.use(errorHandler);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
