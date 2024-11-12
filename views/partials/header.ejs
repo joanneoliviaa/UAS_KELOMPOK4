@@ -1,18 +1,21 @@
 <header>
     <input type="checkbox" name="" id="check">
     <label for="check" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+    
     <h1 class="logo">
-      <a href="/index.html">
+      <a href="/">
           <img src="/img/malika.jpg" alt="logo">
       </a>
     </h1>
+    
     <nav>
-        <a href="/">Home</a>
-        <a href="/fashionNews/fashionNews.html">News</a>
-        <a href="/trends">Trends</a>
-        <a href="/shop/indexshop.html">Shops</a>
+        <a href="/" class="<%= activePage === '/' ? 'active' : '' %>">Home</a>
+        <a href="/fashionNews/fashionNews.html" class="<%= activePage === '/fashionNews/fashionNews.html' ? 'active' : '' %>">News</a>
+        <a href="/trends" class="<%= activePage === '/trends' ? 'active' : '' %>">Trends</a>
+        <a href="/shop/indexshop.html" class="<%= activePage === '/shop/indexshop.html' ? 'active' : '' %>">Shops</a>
     </nav>
+    
     <a href="/SignIn/signIn.html" class="btn" id="sign-up-btn">
         <i class="fas fa-user"></i> Sign In
     </a>
-  </header>
+</header>

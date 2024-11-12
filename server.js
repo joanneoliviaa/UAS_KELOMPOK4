@@ -30,15 +30,27 @@ app.set('views', path.join(__dirname, 'views'));
 app.use('/', require('./routes/routes'));
 
 app.get('/', (req, res) => {
-    res.render('index'); 
+    res.render('index', { activePage: '/' }); 
 });
 
 app.get('/trends', (req, res) => {
-    res.render('trends/trends');  
+    res.render('trends/trends', { activePage: '/trends' });  
 });
 
 app.get('/trends/autumn', (req, res) => {
-    res.render('trends/autumn/autumn'); 
+    res.render('trends/autumn/autumn', { activePage: '/trends' }); 
+});
+
+app.get('/trends/spring', (req, res) => {
+    res.render('trends/spring/spring', { activePage: '/trends' }); 
+});
+
+app.get('/trends/summer', (req, res) => {
+    res.render('trends/summer/summer', { activePage: '/trends' }); 
+});
+
+app.get('/trends/winter', (req, res) => {
+    res.render('trends/winter/winter', { activePage: '/trends' }); 
 });
 
 app.use(errorHandler);

@@ -552,3 +552,156 @@ Could not find the include file "../../partials/header"
     15|     <a href="/trends/trends.html" class="circle-btn">
 
 Could not find the include file "../partials/header"
+20241112	21:56:06	92255011-c228-407b-ad2c-e33636dee0d4	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.ejs:12
+    10| </head>
+    11| <body>
+ >> 12|     <%- include('partials/header') %>
+    13|     
+    14|     <section class="hero">
+    15|         <!-- Left and right controls -->
+
+D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\partials\header.ejs:12
+    10|     
+    11|     <nav>
+ >> 12|         <a href="/" class="<%= activePage === '/' ? 'active' : '' %>">Home</a>
+    13|         <a href="/fashionNews/fashionNews.html" class="<%= activePage === '/fashionNews/fashionNews.html' ? 'active' : '' %>">News</a>
+    14|         <a href="/trends" class="<%= activePage === '/trends' ? 'active' : '' %>">Trends</a>
+    15|         <a href="/shop/indexshop.html" class="<%= activePage === '/shop/indexshop.html' ? 'active' : '' %>">Shops</a>
+
+activePage is not defined
+20241112	21:56:21	770c192d-c330-41ab-ba3b-47e00205d389	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:16
+    14| <body ng-controller="FashionTrendsController">
+    15| 
+ >> 16|     <%- include('../partials/header') %>
+    17| 
+    18|     <div class="container mt-5">
+    19|         <h2 class="text-center">Stay Inspired</h2>
+
+D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\partials\header.ejs:12
+    10|     
+    11|     <nav>
+ >> 12|         <a href="/" class="<%= activePage === '/' ? 'active' : '' %>">Home</a>
+    13|         <a href="/fashionNews/fashionNews.html" class="<%= activePage === '/fashionNews/fashionNews.html' ? 'active' : '' %>">News</a>
+    14|         <a href="/trends" class="<%= activePage === '/trends' ? 'active' : '' %>">Trends</a>
+    15|         <a href="/shop/indexshop.html" class="<%= activePage === '/shop/indexshop.html' ? 'active' : '' %>">Shops</a>
+
+activePage is not defined
+20241112	21:56:23	6f4342e2-d1ab-469e-b49b-e76bbcff51bd	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\trends.ejs:16
+    14| <body ng-controller="FashionTrendsController">
+    15| 
+ >> 16|     <%- include('../partials/header') %>
+    17| 
+    18|     <div class="container mt-5">
+    19|         <h2 class="text-center">Stay Inspired</h2>
+
+D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\partials\header.ejs:12
+    10|     
+    11|     <nav>
+ >> 12|         <a href="/" class="<%= activePage === '/' ? 'active' : '' %>">Home</a>
+    13|         <a href="/fashionNews/fashionNews.html" class="<%= activePage === '/fashionNews/fashionNews.html' ? 'active' : '' %>">News</a>
+    14|         <a href="/trends" class="<%= activePage === '/trends' ? 'active' : '' %>">Trends</a>
+    15|         <a href="/shop/indexshop.html" class="<%= activePage === '/shop/indexshop.html' ? 'active' : '' %>">Shops</a>
+
+activePage is not defined
+20241112	21:56:42	31214ecc-6508-4b74-8371-cadec7b3afa9	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.ejs:12
+    10| </head>
+    11| <body>
+ >> 12|     <%- include('partials/header') %>
+    13|     
+    14|     <section class="hero">
+    15|         <!-- Left and right controls -->
+
+D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\partials\header.ejs:12
+    10|     
+    11|     <nav>
+ >> 12|         <a href="/" class="<%= activePage === '/' ? 'active' : '' %>">Home</a>
+    13|         <a href="/fashionNews/fashionNews.html" class="<%= activePage === '/fashionNews/fashionNews.html' ? 'active' : '' %>">News</a>
+    14|         <a href="/trends" class="<%= activePage === '/trends' ? 'active' : '' %>">Trends</a>
+    15|         <a href="/shop/indexshop.html" class="<%= activePage === '/shop/indexshop.html' ? 'active' : '' %>">Shops</a>
+
+activePage is not defined
+20241112	21:59:17	7f772c85-6cce-48f2-a582-c2d311cb0d16	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.ejs:12
+    10| </head>
+    11| <body>
+ >> 12|     <%- include('partials/header') %>
+    13|     
+    14|     <section class="hero">
+    15|         <!-- Left and right controls -->
+
+D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\partials\header.ejs:12
+    10|     
+    11|     <nav>
+ >> 12|         <a href="/" class="<%= activePage === '/' ? 'active' : '' %>">Home</a>
+    13|         <a href="/fashionNews/fashionNews.html" class="<%= activePage === '/fashionNews/fashionNews.html' ? 'active' : '' %>">News</a>
+    14|         <a href="/trends" class="<%= activePage === '/trends' ? 'active' : '' %>">Trends</a>
+    15|         <a href="/shop/indexshop.html" class="<%= activePage === '/shop/indexshop.html' ? 'active' : '' %>">Shops</a>
+
+activePage is not defined
+20241112	21:59:22	73c9f9cf-18d6-4240-96a2-37439c2aef52	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.ejs:12
+    10| </head>
+    11| <body>
+ >> 12|     <%- include('partials/header') %>
+    13|     
+    14|     <section class="hero">
+    15|         <!-- Left and right controls -->
+
+D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\partials\header.ejs:12
+    10|     
+    11|     <nav>
+ >> 12|         <a href="/" class="<%= activePage === '/' ? 'active' : '' %>">Home</a>
+    13|         <a href="/fashionNews/fashionNews.html" class="<%= activePage === '/fashionNews/fashionNews.html' ? 'active' : '' %>">News</a>
+    14|         <a href="/trends" class="<%= activePage === '/trends' ? 'active' : '' %>">Trends</a>
+    15|         <a href="/shop/indexshop.html" class="<%= activePage === '/shop/indexshop.html' ? 'active' : '' %>">Shops</a>
+
+activePage is not defined
+20241112	21:59:25	d7ad3a26-bd0e-45cc-ab05-bbe85627fc4f	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.ejs:12
+    10| </head>
+    11| <body>
+ >> 12|     <%- include('partials/header') %>
+    13|     
+    14|     <section class="hero">
+    15|         <!-- Left and right controls -->
+
+D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\partials\header.ejs:12
+    10|     
+    11|     <nav>
+ >> 12|         <a href="/" class="<%= activePage === '/' ? 'active' : '' %>">Home</a>
+    13|         <a href="/fashionNews/fashionNews.html" class="<%= activePage === '/fashionNews/fashionNews.html' ? 'active' : '' %>">News</a>
+    14|         <a href="/trends" class="<%= activePage === '/trends' ? 'active' : '' %>">Trends</a>
+    15|         <a href="/shop/indexshop.html" class="<%= activePage === '/shop/indexshop.html' ? 'active' : '' %>">Shops</a>
+
+activePage is not defined
+20241112	21:59:36	26acf8cc-4f42-42c8-85cb-8d02b56da41c	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:12
+    10| </head>
+    11| <body>
+ >> 12|     <%- include('../../partials/header') %>
+    13| 
+    14|     <!--Back Button-->
+    15|     <a href="/trends" class="circle-btn">
+
+D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\partials\header.ejs:12
+    10|     
+    11|     <nav>
+ >> 12|         <a href="/" class="<%= activePage === '/' ? 'active' : '' %>">Home</a>
+    13|         <a href="/fashionNews/fashionNews.html" class="<%= activePage === '/fashionNews/fashionNews.html' ? 'active' : '' %>">News</a>
+    14|         <a href="/trends" class="<%= activePage === '/trends' ? 'active' : '' %>">Trends</a>
+    15|         <a href="/shop/indexshop.html" class="<%= activePage === '/shop/indexshop.html' ? 'active' : '' %>">Shops</a>
+
+activePage is not defined
+20241112	21:59:38	22a0bd6b-f9f0-465a-8b72-7562bffb8ba7	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:12
+    10| </head>
+    11| <body>
+ >> 12|     <%- include('../../partials/header') %>
+    13| 
+    14|     <!--Back Button-->
+    15|     <a href="/trends" class="circle-btn">
+
+D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\partials\header.ejs:12
+    10|     
+    11|     <nav>
+ >> 12|         <a href="/" class="<%= activePage === '/' ? 'active' : '' %>">Home</a>
+    13|         <a href="/fashionNews/fashionNews.html" class="<%= activePage === '/fashionNews/fashionNews.html' ? 'active' : '' %>">News</a>
+    14|         <a href="/trends" class="<%= activePage === '/trends' ? 'active' : '' %>">Trends</a>
+    15|         <a href="/shop/indexshop.html" class="<%= activePage === '/shop/indexshop.html' ? 'active' : '' %>">Shops</a>
+
+activePage is not defined

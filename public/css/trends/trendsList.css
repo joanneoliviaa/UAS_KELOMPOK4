@@ -60,7 +60,7 @@ nav a::after {
     position: absolute;
     width: 0; 
     height: 2px;
-    background-color: #ff4081; 
+    background-color: #725b36; 
     bottom: -5px;
     left: 0;
     transition: width 0.3s ease; 
