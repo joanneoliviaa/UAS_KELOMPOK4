@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/css/trends/detail.css" />
+  <title><%= media.title %></title>
+</head>
+<body>
+  <%- include('../partials/header') %>
+  <h1><%= media.title %></h1>
+  <img src="<%= media.image_url %>" alt="<%= media.title %>" />
+  <p><%= media.description %></p>
+  <a href="/<%= media.season %>">Back to <%= media.season %> Gallery</a>
+</body>
+</html>

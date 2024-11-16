@@ -965,3 +965,52 @@ media is not defined
 20241116	10:32:12	ec82bf5e-e99b-4270-957b-3f32c8aacfbb	Error: Failed to lookup view "trends/undefined/undefined" in views directory "D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views"
 20241116	10:34:05	c1d1866f-7a28-4af3-9e72-0ff21728a6f3	Error: Failed to lookup view "trends/undefined/undefined" in views directory "D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views"
 20241116	10:34:12	3a78c62d-98c3-4a0e-8244-54851a63db32	Error: Failed to lookup view "trends/undefined/undefined" in views directory "D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views"
+20241116	10:53:47	7c8e551d-721f-4fef-8857-265b404d4036	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|       <% mediaList.forEach((media) => { %>
+    21|         <div class="card">
+    22|           <a href="/<%= season %>/<%= media.id %>">
+    23|             <img src="<%= media.image_url %>" alt="<%= media.title %>" />
+
+mediaList is not defined
+20241116	10:53:47	25bf850f-375b-4df6-9f6e-3a4b4b143e89	URIError: Failed to decode param '%3C%=%20media.image_url%20%%3E'
+20241116	10:56:18	4a4fbcae-9be5-4fdd-8cf6-9eb654b2c817	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|       <% mediaList.forEach((media) => { %>
+    21|         <div class="card">
+    22|           <a href="/<%= season %>/<%= media.id %>">
+    23|             <img src="<%= media.image_url %>" alt="<%= media.title %>" />
+
+mediaList is not defined
+20241116	10:56:18	c9ddf0c3-b8df-478e-945e-aeb4b1fdaa03	URIError: Failed to decode param '%3C%=%20media.image_url%20%%3E'
+20241116	10:56:18	aa21093b-1315-4e68-9cb3-7d9f177bbb83	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|       <% mediaList.forEach((media) => { %>
+    21|         <div class="card">
+    22|           <a href="/<%= season %>/<%= media.id %>">
+    23|             <img src="<%= media.image_url %>" alt="<%= media.title %>" />
+
+mediaList is not defined
+20241116	10:56:18	e6f1e445-259f-4e94-8995-21805390605d	URIError: Failed to decode param '%3C%=%20media.image_url%20%%3E'
+20241116	10:56:45	dbd4043b-3cba-4bd6-adb8-4ecb650a314d	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:22
+    20|       <% media.forEach((media) => { %>
+    21|         <div class="card">
+ >> 22|           <a href="/<%= season %>/<%= media.id %>">
+    23|             <img src="<%= media.image_url %>" alt="<%= media.title %>" />
+    24|             <h3><%= media.title %></h3>
+    25|           </a>
+
+season is not defined
+20241116	10:56:45	2e5490a0-0453-44fb-9c5a-eb9b85706d0d	URIError: Failed to decode param '%3C%=%20media.image_url%20%%3E'
+20241116	10:58:35	d1d2f81a-521c-473b-8b23-ab42fec7dc18	Error: Failed to lookup view "trends/detail" in views directory "D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views"
+20241116	10:58:38	5f9ae554-219e-464f-97d0-b8d0450cef1a	Error: Failed to lookup view "trends/detail" in views directory "D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views"
+20241116	11:00:57	7d35a71e-00e0-48bb-8253-b4e5025df572	Error: Failed to lookup view "trends/detail" in views directory "D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views"
+20241116	11:12:46	9c394d6d-24e8-4042-a105-a4d251d9269a	Error: Failed to lookup view "trends/detail" in views directory "D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views"
+20241116	11:12:49	2d695274-a737-4253-baa5-b567bbdd9e82	Error: Failed to lookup view "trends/detail" in views directory "D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views"
+20241116	11:15:54	52bb757b-d4ce-4c2f-863b-d2c132e0216f	Error: Failed to lookup view "trends/detail" in views directory "D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views"
+20241116	11:19:34	e38eb532-2c68-497a-99d9-7113ed370d32	Error: Failed to lookup view "trends/detail" in views directory "D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views"
+20241116	11:21:27	4cce86a9-9a8a-4ccf-9921-5440ca545e6b	Error: Failed to lookup view "trends/detail" in views directory "D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views"
+20241116	11:21:28	2837af9b-bd0d-4d1a-95f9-312b2ffe820b	Error: Failed to lookup view "trends/detail" in views directory "D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views"
