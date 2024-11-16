@@ -10,11 +10,15 @@
   "author": "Dave Gray",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "date-fns": "^2.23.0",
     "ejs": "^3.1.10",
     "express": "^4.21.1",
+    "express-validator": "^7.2.0",
+    "jsonwebtoken": "^9.0.2",
     "pg": "^8.13.1",
     "uuid": "^8.3.2"
   },

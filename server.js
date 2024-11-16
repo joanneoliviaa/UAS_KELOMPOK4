@@ -5,14 +5,18 @@ const cors = require('cors');
 const corsOptions = require('./config/corsOptions');
 const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
-const pool = require('./model/db');  // Import the pool from db.js
+const pool = require('./model/db'); 
+const authRoutes = require('./routes/authRoutes');
 const bodyParser = require('body-parser');
 const mediaRoutes = require('./routes/mediaRoutes');
 const mediaController = require('./controllers/mediaController'); 
 const PORT = process.env.PORT || 3500;
 
-// custom middleware logger
-app.use(logger);
+//Middleware
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 // Cross Origin Resource Sharing
 app.use(cors(corsOptions));
@@ -22,12 +26,6 @@ app.use(express.urlencoded({ extended: false }));
 
 // built-in middleware for json 
 app.use(express.json());
-
-// serve static files
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
 
 // routes
 app.use('/', require('./routes/routes'));
@@ -42,7 +40,9 @@ app.get('/trends', (req, res) => {
 
 app.get('/trends/:season', mediaController.renderTrendsPage);
 
+app.use('/auth', authRoutes);
 app.use('/trends', mediaRoutes);
+app.use(mediaRoutes);
 
 app.use(errorHandler);
 

@@ -18,7 +18,7 @@ exports.getMediaDetail = async (req, res) => {
     if (!mediaDetail) {
       return res.status(404).send('Media not found');
     }
-    res.render('trends/detail', { media: mediaDetail });
+    res.render('trends/details', { media: mediaDetail });
   } catch (error) {
     res.status(500).send('An error occurred while fetching media detail.');
   }

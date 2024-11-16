@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="/css/trends/detail.css" />
+  <link rel="stylesheet" href="/css/trends/details.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
   <title><%= media.title %></title>
 </head>
-<body>
-  <%- include('../partials/header') %>
-  <h1><%= media.title %></h1>
-  <img src="<%= media.image_url %>" alt="<%= media.title %>" />
-  <p><%= media.description %></p>
-  <a href="/<%= media.season %>">Back to <%= media.season %> Gallery</a>
+<body ng-app="commentApp" ng-controller="CommentController">
+    <!-- Header -->
+    <%- include('../partials/header', { activePage: '/trends' }) %>
+  
+    <!-- Media Detail Container -->
+    <div class="media-detail">
+      <div class="media-image">
+        <img src="<%= media.url %>" alt="<%= media.title %>">
+      </div>
+      <div class="media-content">
+        <h1><%= media.title %></h1>
+        <p class="media-description"><%= media.description %></p>
+        
+        <!-- Comments Section -->
+        <div class="media-comments">
+          <h2>Comments</h2>
+          <div ng-repeat="comment in comments">
+            <p><strong>{{ comment.author }}</strong>: {{ comment.text }}</p>
+          </div>
+  
+          <!-- Add Comment Form -->
+          <form ng-submit="addComment()">
+            <textarea ng-model="newComment.text" placeholder="Add a comment" required></textarea>
+            <input type="hidden" ng-model="newComment.mediaId" ng-init="newComment.mediaId='<%= media.id %>'" />
+            <button type="submit">Add Comment</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+    <script src="/angular/comments.js"></script>
 </body>
 </html>

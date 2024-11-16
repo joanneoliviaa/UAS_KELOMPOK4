@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="authApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <script src="/angular/angular.min.js"></script>
+  <script src="/angular/app.js"></script>
+</head>
+<body>
+  <h2>Sign Up</h2>
+  <div ng-controller="SignupController">
+    <form ng-submit="signup()">
+      <div>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" ng-model="user.fullName" placeholder="Full Name" required>
+      </div>
+      <div>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" ng-model="user.dob" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" ng-model="user.email" placeholder="Email" required>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" ng-model="user.password" placeholder="Password" required>
+      </div>
+      <div>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" ng-model="user.confirmPassword" placeholder="Confirm Password" required>
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p style="color: red;" ng-if="errorMessage">{{ errorMessage }}</p>
+    <p style="color: green;" ng-if="successMessage">{{ successMessage }}</p>
+  </div>
+</body>
+</html>
