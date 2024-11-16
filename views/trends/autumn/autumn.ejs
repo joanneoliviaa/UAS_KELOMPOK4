@@ -16,56 +16,15 @@
         <i class="fas fa-arrow-left"></i> 
     </a>
 
-    <main class="grid-container">
-        <div class="grid-item">
-            <img src="/img/trends/autumn/autumn1.jpg" alt="Image 1">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/autumn/autumn2.jpg" alt="Image 2">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/autumn/autumn3.jpg" alt="Image 3">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/autumn/autumn4.jpg" alt="Image 4">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/autumn/autumn5.jpg" alt="Image 5">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/autumn/autumn6.jpg" alt="Image 6">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/autumn/autumn7.jpg" alt="Image 7">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/autumn/autumn8.jpg" alt="Image 8">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/autumn/autumn9.jpg" alt="Image 9">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/autumn/autumn10.jpg" alt="Image 10">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/autumn/autumn11.jpg" alt="Image 11">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/autumn/autumn12.jpg" alt="Image 12">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/autumn/autumn13.jpg" alt="Image 13">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/autumn/autumn14.jpg" alt="Image 14">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/autumn/autumn15.jpg" alt="Image 15">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/autumn/autumn16.jpg" alt="Image 16">
-        </div>
-    </main>
+    <div class="gallery">
+        <% media.forEach(item => { %>
+          <div class="media-item">
+            <img src="<%= item.url %>" alt="<%= item.title %>">
+            <h2><%= item.title %></h2>
+            <p><%= item.description %></p>
+          </div>
+        <% }) %>
+      </div>
 
     <!-- Footer Section -->
     <footer>

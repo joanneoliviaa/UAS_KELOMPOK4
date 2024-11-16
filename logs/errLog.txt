@@ -705,3 +705,263 @@ D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\partials\header.ejs:
     15|         <a href="/shop/indexshop.html" class="<%= activePage === '/shop/indexshop.html' ? 'active' : '' %>">Shops</a>
 
 activePage is not defined
+20241114	21:08:19	7bbc6c7b-e975-4c29-9504-19874e065b14	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241114	21:08:19	45ddb36b-c8f8-4cf5-bcb2-520fd3c0bbc5	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241114	21:08:33	2efb9f85-1f22-41ad-a0bc-50d0de43d967	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241114	21:08:33	ef1e466e-882b-4447-abba-7d646e9a6825	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241114	21:09:46	4262c231-fd11-446a-b76d-0219fefdbcce	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241114	21:09:46	709990e0-aef5-433f-a045-4275ab335117	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241114	21:09:46	ddd787ca-82fe-4e84-ba13-a8ca9b305054	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241114	21:09:46	d0a93d1b-58d5-4ad6-8498-f2813d3be95e	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241114	21:09:47	8ddb719a-490a-4f56-a1a1-3dccbd60719c	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241114	21:09:47	816ebfba-8149-4c0b-819f-6d9ae382c32a	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241114	21:09:47	d1880f35-6276-40c6-bff2-52ac406b8045	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241114	21:09:47	96ff0cb2-fac0-4d49-869c-78e9163681e9	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241114	21:09:47	349e74a0-662f-4ad0-815b-2d46d07c32ea	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241114	21:09:47	ed522055-7503-4b09-af94-7ed3dbd4d819	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241114	21:09:47	9d3d643f-11f7-42f4-bba5-239b6ecfba78	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241114	21:09:47	03258a99-cb75-479d-b5c6-f2de2b73508d	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241114	21:09:47	3b49eff0-d077-4db0-af30-4ad490054d4f	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241114	21:09:47	3a3eb1d9-59af-402b-a24b-389d8e11fcbf	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241114	21:09:47	aa167717-f841-488f-9b72-76339720a03e	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241114	21:09:47	418d6b36-6bb9-4f3d-8d0c-810d183cd34e	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241114	21:09:47	50b59d34-6be3-475b-abae-ac779ae6ce7f	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241114	21:09:47	810b5e0e-38d3-4116-8824-3d3a7c0da12d	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241114	21:09:48	33bcb0c5-fdd8-450f-b5b8-7383bd2d201b	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241114	21:09:48	a7e9adfc-4f5e-4c44-8528-cf8ef5b91d9d	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241114	21:09:49	28c1d39e-df7d-4f17-87f1-a9ec36c42c17	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241114	21:09:49	93893046-bd5f-46fd-abef-f108b39dbf7e	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241114	21:12:56	5b450597-64c4-42d8-8fa7-7ff113c585bf	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241114	21:12:56	3aaaddfa-784b-4f35-a4b7-0fd6f1247ca1	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241114	21:13:05	d6a471fb-6ca1-40de-95a4-2879f2d8af81	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241114	21:13:05	994c4863-ffa0-43c4-9dcf-2d1cd1b3f967	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241114	21:20:36	ecf9f829-2ca6-43c3-adc3-020d92a07be5	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241114	21:20:36	317f4ff0-7261-49fd-8a26-64ff85699ee8	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241114	21:20:37	a3437bd2-b890-4f5b-a507-4af01cbaa816	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241114	21:20:37	d2604ab9-88f8-4260-bda8-19b6c0d96932	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241114	21:20:37	30e13e6e-8d2a-44bd-9066-b9dbfc4ddb7e	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241114	21:20:37	16b27c0b-b534-4de2-abdc-9d02529cfae7	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241116	09:40:24	228dce19-f9aa-4f02-b138-23aca6042469	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241116	09:40:24	0979a456-91a4-4980-b406-4aa18fffbc94	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241116	10:05:44	267b1337-10a1-4e2d-a3c6-00a9f9ba8b50	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241116	10:05:44	fdf1a75f-4c39-47fb-ba7a-3438ca9cbae3	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241116	10:08:56	a2179164-c18e-4869-a9c5-32a657680f4f	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241116	10:08:56	92f2de03-c9a2-447b-b895-f7196ad5e522	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241116	10:15:10	d182cc77-c6cc-4ce6-b5b4-4eed792bbba6	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241116	10:15:10	36d8fe99-d959-4f25-8898-6fc04a618f52	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241116	10:15:10	9a267e0b-fd09-4cc4-93fb-c7ec1bc2d974	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241116	10:15:10	0649d3d5-6657-45a7-a98e-ff9faed6229f	URIError: Failed to decode param '%3C%=%20item.url%20%%3E'
+20241116	10:27:13	d6adf050-619d-4f4f-9657-5ad147d431a7	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241116	10:27:50	db48695d-4b14-447c-9e00-781a4a27de06	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241116	10:29:39	23199f14-7702-485a-8f7e-e872d9e16fef	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\trends\autumn\autumn.ejs:20
+    18| 
+    19|     <div class="gallery">
+ >> 20|         <% media.forEach(item => { %>
+    21|           <div class="media-item">
+    22|             <img src="<%= item.url %>" alt="<%= item.title %>">
+    23|             <h2><%= item.title %></h2>
+
+media is not defined
+20241116	10:32:12	ec82bf5e-e99b-4270-957b-3f32c8aacfbb	Error: Failed to lookup view "trends/undefined/undefined" in views directory "D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views"
+20241116	10:34:05	c1d1866f-7a28-4af3-9e72-0ff21728a6f3	Error: Failed to lookup view "trends/undefined/undefined" in views directory "D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views"
+20241116	10:34:12	3a78c62d-98c3-4a0e-8244-54851a63db32	Error: Failed to lookup view "trends/undefined/undefined" in views directory "D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views"

@@ -6,6 +6,9 @@ const corsOptions = require('./config/corsOptions');
 const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
 const pool = require('./model/db');  // Import the pool from db.js
+const bodyParser = require('body-parser');
+const mediaRoutes = require('./routes/mediaRoutes');
+const mediaController = require('./controllers/mediaController'); 
 const PORT = process.env.PORT || 3500;
 
 // custom middleware logger
@@ -37,21 +40,9 @@ app.get('/trends', (req, res) => {
     res.render('trends/trends', { activePage: '/trends' });  
 });
 
-app.get('/trends/autumn', (req, res) => {
-    res.render('trends/autumn/autumn', { activePage: '/trends' }); 
-});
+app.get('/trends/:season', mediaController.renderTrendsPage);
 
-app.get('/trends/spring', (req, res) => {
-    res.render('trends/spring/spring', { activePage: '/trends' }); 
-});
-
-app.get('/trends/summer', (req, res) => {
-    res.render('trends/summer/summer', { activePage: '/trends' }); 
-});
-
-app.get('/trends/winter', (req, res) => {
-    res.render('trends/winter/winter', { activePage: '/trends' }); 
-});
+app.use('/trends', mediaRoutes);
 
 app.use(errorHandler);
 
