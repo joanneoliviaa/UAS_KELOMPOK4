@@ -38,6 +38,11 @@ app.get('/trends', (req, res) => {
     res.render('trends/trends', { activePage: '/trends' });  
 });
 
+app.get('/signup', (req, res) => {
+    res.render('signup');  // Renders the signup.ejs page
+});
+
+
 app.get('/trends/:season', mediaController.renderTrendsPage);
 
 app.use('/auth', authRoutes);

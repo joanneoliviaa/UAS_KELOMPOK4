@@ -1037,3 +1037,30 @@ activePage is not defined
 20241116	13:56:26	93dbdb2e-c5db-40ea-aa0c-7dd898ff7676	URIError: Failed to decode param '%3C%=%20media.id%20%%3E'
 20241116	14:29:02	abce235f-e98c-4f08-8cd2-ea4dfb855e56	URIError: Failed to decode param '%3C%=%20media.id%20%%3E'
 20241116	14:32:00	6b8d1e4a-6321-4e65-aac9-5cd0cf4f4534	Error: Failed to lookup view "signup" in views directory "D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views"
+20241116	16:43:36	88e49dd7-0910-4bde-99d6-16921f25e1fe	Error: C:\Users\Ronald\UAS_KELOMPOK4\views\signin.ejs:36
+    34|   </div>
+    35| 
+ >> 36|   <%- include('partials/footer'); %>
+    37| </body>
+    38| </html>
+    39| 
+
+Could not find the include file "partials/footer"
+20241116	16:43:37	93225389-a006-4b31-a6e0-3e85f7e54bd6	Error: C:\Users\Ronald\UAS_KELOMPOK4\views\signin.ejs:36
+    34|   </div>
+    35| 
+ >> 36|   <%- include('partials/footer'); %>
+    37| </body>
+    38| </html>
+    39| 
+
+Could not find the include file "partials/footer"
+20241116	16:43:37	9f4c6681-28c1-4120-ab2d-f8fc3c8a4b2b	Error: C:\Users\Ronald\UAS_KELOMPOK4\views\signin.ejs:36
+    34|   </div>
+    35| 
+ >> 36|   <%- include('partials/footer'); %>
+    37| </body>
+    38| </html>
+    39| 
+
+Could not find the include file "partials/footer"
