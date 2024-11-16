@@ -1,6 +1,17 @@
 const bcrypt = require('bcrypt');
 const pool = require('../model/db');
 
+function isAtLeast10YearsOld(dob) {
+  const today = new Date();
+  const birthDate = new Date(dob);
+  const age = today.getFullYear() - birthDate.getFullYear();
+  const monthDifference = today.getMonth() - birthDate.getMonth();
+  if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+    return age - 1;
+  }
+  return age;
+}
+
 // Endpoint Sign Up
 const signup = async (req, res) => {
   const { fullName, dob, email, password, confirmPassword } = req.body;
@@ -13,6 +24,10 @@ const signup = async (req, res) => {
   // Check if passwords match
   if (password !== confirmPassword) {
     return res.status(400).json({ message: 'Passwords do not match' });
+  }
+
+  if (isAtLeast10YearsOld(dob) < 10) {
+    return res.status(400).json({ message: 'You must be at least 10 years old to sign up' });
   }
 
   // Check if email already exists
