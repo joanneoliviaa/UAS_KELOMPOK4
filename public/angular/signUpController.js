@@ -9,7 +9,7 @@ app.controller('SignupController', function ($scope, $http, $window) {
   // Fungsi untuk Sign Up
   $scope.signup = function () {
     var data = {
-      fullName: $scope.user.fullName,
+      full_name: $scope.user.full_name,
       dob: $scope.user.dob,
       email: $scope.user.email,
       password: $scope.user.password,

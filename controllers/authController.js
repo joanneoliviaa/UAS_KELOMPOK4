@@ -1,4 +1,3 @@
-const bcrypt = require('bcrypt');
 const pool = require('../model/db');
 
 function isAtLeast10YearsOld(dob) {
@@ -14,10 +13,10 @@ function isAtLeast10YearsOld(dob) {
 
 // Endpoint Sign Up
 const signup = async (req, res) => {
-  const { fullName, dob, email, password, confirmPassword } = req.body;
+  const { full_name, dob, email, password, confirmPassword } = req.body;
 
   // Validate all input fields
-  if (!fullName || !dob || !email || !password || !confirmPassword) {
+  if (!full_name || !dob || !email || !password || !confirmPassword) {
     return res.status(400).json({ message: 'All fields are required' });
   }
 
@@ -39,12 +38,12 @@ const signup = async (req, res) => {
   try {
     // Insert the new user into the database without hashing the password
     await pool.query(
-      'INSERT INTO users (id, full_name, dob, email, password) VALUES ($1, $2, $3, $4, $5)',
-      [fullName, dob, email, password] // Store password as plain text
+      'INSERT INTO users (full_name, dob, email, password) VALUES ($1, $2, $3, $4)',
+      [full_name, dob, email, password] 
     );
 
     // After successful sign-up, redirect to the index page
-    res.redirect('/');  // Redirect to home page after successful signup
+    res.redirect('/'); 
   } catch (err) {
     console.error(err.message);
     res.status(500).json({ message: 'Internal server error' });
@@ -85,7 +84,12 @@ const signin = async (req, res) => {
 
 // Render Sign In page
 const renderSigninPage = (req, res) => {
-  res.render('signin', { activePage: '/signin', message: '' }); // Pass activePage and empty message initially
+  res.render('signin', { activePage: '/signin', message: '' }); 
 };
 
-module.exports = { signup, signin, renderSigninPage };
+//Render Sign Up Page
+const renderSignUpPage = (req, res) => {
+  res.render('signup', { activePage: '/signup', message: '' });
+};
+
+module.exports = { signup, signin, renderSigninPage, renderSignUpPage };

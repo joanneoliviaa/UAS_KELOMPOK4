@@ -1,4 +1,4 @@
-const pool = require('../model/db'); // Ensure the path is correct
+const pool = require('../model/db'); 
 
 const getData = async (req, res) => {
   try {

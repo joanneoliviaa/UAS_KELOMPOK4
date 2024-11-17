@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const { signup, signin, renderSigninPage } = require('../controllers/authController');
+const { signup, signin, renderSigninPage, renderSignUpPage } = require('../controllers/authController');
 
+//Route akses
+router.get('/signup', renderSignUpPage);
 router.get('/signin', renderSigninPage);
 
 // POST: Sign Up

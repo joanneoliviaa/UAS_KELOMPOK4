@@ -6,6 +6,7 @@ const corsOptions = require('./config/corsOptions');
 const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
 const pool = require('./model/db'); 
+const authController = require('./controllers/authController');
 const authRoutes = require('./routes/authRoutes');
 const bodyParser = require('body-parser');
 const mediaRoutes = require('./routes/mediaRoutes');
@@ -27,7 +28,10 @@ app.use(express.urlencoded({ extended: false }));
 // built-in middleware for json 
 app.use(express.json());
 
-// routes
+// routes                      
+app.use('/auth', authRoutes);
+app.post('/signup', authController.signup);
+
 app.use('/', require('./routes/routes'));
 
 app.get('/', (req, res) => {
@@ -38,16 +42,9 @@ app.get('/trends', (req, res) => {
     res.render('trends/trends', { activePage: '/trends' });  
 });
 
-app.get('/signup', (req, res) => {
-    res.render('signup');  // Renders the signup.ejs page
-});
-
-
 app.get('/trends/:season', mediaController.renderTrendsPage);
 
-app.use('/auth', authRoutes);
-app.use('/trends', mediaRoutes);
-app.use(mediaRoutes);
+app.use('/trends', mediaRoutes); 
 
 app.use(errorHandler);
 
