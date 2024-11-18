@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const cors = require('cors');
+const session = require('express-session');
 const corsOptions = require('./config/corsOptions');
 const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
@@ -18,6 +19,11 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+app.use(session({
+    secret: 'aa4ec9c617bc4a909b5efe43138abc0200727fdcc086cfefda50534b3b659d9f', 
+    resave: false,
+    saveUninitialized: true,
+  }));
 
 // Cross Origin Resource Sharing
 app.use(cors(corsOptions));

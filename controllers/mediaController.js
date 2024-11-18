@@ -1,3 +1,4 @@
+const Media = require('../model/media');
 const validSeasons = ['summer', 'winter', 'spring', 'autumn'];
 
 exports.renderTrendsPage = async (req, res) => {

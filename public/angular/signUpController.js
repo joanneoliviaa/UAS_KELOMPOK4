@@ -21,7 +21,7 @@ app.controller('SignupController', function ($scope, $http, $window) {
         $scope.successMessage = 'Sign Up successful! Redirecting to Sign In page.';
         $scope.errorMessage = '';
         setTimeout(() => {
-          $window.location.href = '/signin'; // Redirect ke halaman Sign In
+          $window.location.href = '/auth/signin'; // Redirect ke halaman Sign In
         }, 2000);
       })
       .catch(error => {
