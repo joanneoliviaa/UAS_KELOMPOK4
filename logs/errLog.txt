@@ -1066,3 +1066,23 @@ Could not find the include file "partials/footer"
 Could not find the include file "partials/footer"
 20241117	19:02:31	6fbb6a2b-abce-4bc6-a3d9-f4fd24f7ef6e	URIError: Failed to decode param '%3C%=%20media.id%20%%3E'
 20241117	19:05:24	31d174a9-136f-4167-9a4b-d3f8307268ed	URIError: Failed to decode param '%3C%=%20media.id%20%%3E'
+20241118	19:33:42	49ff073a-bea0-46c8-9f24-6d9160279c4f	ReferenceError: db is not defined
+20241118	19:34:32	be8738c7-af0a-4a93-8c8d-3526fb03e585	TypeError: db.query is not a function
+20241118	19:36:01	7e40986e-9a35-4a0c-bc0f-4a6095133a73	TypeError: db.query is not a function
+20241118	19:50:50	fc1229f1-d004-4028-a452-f79f120b7b45	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\index.ejs:14
+    12| </head>
+    13| <body>
+ >> 14|     <%- include('partials/header') %>
+    15|     
+    16|     <section class="hero carousel slide" id="heroCarousel" data-bs-ride="carousel">
+    17|         <!-- Slides -->
+
+D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\partials\header.ejs:18
+    16|     </nav>
+    17|     
+ >> 18|     <% if (session.userId) { %> <!-- Cek jika user sudah login -->
+    19|         <a href="#" class="btn">
+    20|             <i class="fas fa-user"></i> Welcome, <%= session.userName %> 
+    21|         </a>
+
+session is not defined

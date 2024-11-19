@@ -15,7 +15,13 @@
         <a href="/shop/indexshop.html" class="<%= activePage === '/shop/indexshop.html' ? 'active' : '' %>">Shops</a>
     </nav>
     
-    <a href="/auth/signin" class="btn" id="sign-up-btn">
-        <i class="fas fa-user"></i> Sign In
-    </a>
+    <% if (session.userId) { %> 
+        <a href="#" class="btn">
+            <i class="fas fa-user"></i><%= session.userName %> 
+        </a>
+    <% } else { %> 
+        <a href="/auth/signin" class="btn" id="sign-up-btn">
+            <i class="fas fa-user"></i> Sign In
+        </a>
+    <% } %>
 </header>

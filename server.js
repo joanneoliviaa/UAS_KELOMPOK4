@@ -34,6 +34,12 @@ app.use(express.urlencoded({ extended: false }));
 // built-in middleware for json 
 app.use(express.json());
 
+// Middleware untuk menyediakan session ke dalam view
+app.use((req, res, next) => {
+    res.locals.session = req.session; 
+    next();
+  });
+
 // routes                      
 app.use('/auth', authRoutes);
 app.post('/signup', authController.signup);

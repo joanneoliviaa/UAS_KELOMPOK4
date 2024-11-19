@@ -35,3 +35,30 @@ exports.getMediaDetail = async (req, res) => {
     res.status(500).send('An error occurred while fetching media detail.');
   }
 };
+
+// Get comments for a specific media
+exports.getComments = (req, res) => {
+  const mediaId = req.params.id;
+
+  Comment.getByMediaId(mediaId, (err, comments) => {
+    if (err) return res.status(500).json({ message: 'Error fetching comments' });
+    res.json(comments);
+  });
+};
+
+// Add a new comment
+exports.addComment = (req, res) => {
+  const { text } = req.body;
+  const mediaId = req.params.id;
+  const userId = req.session.userId;
+
+  if (!userId) return res.status(401).json({ message: 'User not logged in' });
+
+  const commentData = { text, userId, mediaId };
+
+  Comment.create(commentData, (err, newComment) => {
+    if (err) return res.status(500).json({ message: 'Error saving comment' });
+    res.status(201).json(newComment);
+  });
+};
+

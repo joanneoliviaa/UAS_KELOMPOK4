@@ -1,15 +1,26 @@
-const db = require('./db');
+const pool = require('./db');
 const bcrypt = require('bcryptjs');
+const query = (text, params) => {
+  return pool.query(text, params);
+};
 
 const User = {
+  // Membuat user baru dengan email dan password
   create: async (email, password) => {
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const result = await db.query('INSERT INTO users (email, password) VALUES (?, ?)', [email, hashedPassword]);
-    return result.insertId;
+    // Langsung memasukkan password tanpa di-hash
+    const result = await query(
+      'INSERT INTO users (email, password) VALUES ($1, $2) RETURNING id',
+      [email, password] // Menyimpan password tanpa di-hash
+    );
+
+    // Mengembalikan id user yang baru saja dibuat
+    return result.rows[0].id;
   },
+
+  // Mencari user berdasarkan email
   findByEmail: async (email) => {
-    const result = await db.query('SELECT * FROM users WHERE email = ?', [email]);
-    return result[0];
+    const result = await query('SELECT * FROM users WHERE email = $1', [email]);
+    return result.rows[0]; // Mengembalikan user pertama yang ditemukan
   },
 };
 
