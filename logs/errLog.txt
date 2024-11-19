@@ -1086,3 +1086,71 @@ D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\partials\header.ejs:
     21|         </a>
 
 session is not defined
+20241119	20:15:35	f075cca7-33a8-48d5-a04c-834e4145b678	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\news.ejs:12
+    10| </head>
+    11| <body ng-controller="newsController">
+ >> 12|   <%- include('partials/header'); %>
+    13| 
+    14|   <!-- Sorting Controls -->
+    15|   <div class="container mt-4">
+
+D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\partials\header.ejs:12
+    10|     
+    11|     <nav>
+ >> 12|         <a href="/" class="<%= activePage === '/' ? 'active' : '' %>">Home</a>
+    13|         <a href="/news" class="<%= activePage === '/news' ? 'active' : '' %>">News</a>
+    14|         <a href="/trends" class="<%= activePage === '/trends' ? 'active' : '' %>">Trends</a>
+    15|         <a href="/shop/indexshop.html" class="<%= activePage === '/shop/indexshop.html' ? 'active' : '' %>">Shops</a>
+
+activePage is not defined
+20241119	20:15:49	37adf6d6-7e2c-45b8-84d2-0258948ae1e9	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\news.ejs:12
+    10| </head>
+    11| <body ng-controller="newsController">
+ >> 12|     <%- include('partials/header'); %>
+    13| 
+    14|   <!-- Sorting Controls -->
+    15|   <div class="container mt-4">
+
+D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\partials\header.ejs:12
+    10|     
+    11|     <nav>
+ >> 12|         <a href="/" class="<%= activePage === '/' ? 'active' : '' %>">Home</a>
+    13|         <a href="/news" class="<%= activePage === '/news' ? 'active' : '' %>">News</a>
+    14|         <a href="/trends" class="<%= activePage === '/trends' ? 'active' : '' %>">Trends</a>
+    15|         <a href="/shop/indexshop.html" class="<%= activePage === '/shop/indexshop.html' ? 'active' : '' %>">Shops</a>
+
+activePage is not defined
+20241119	20:15:50	1cc78894-0e6d-43b8-a193-f078acb64c3c	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\news.ejs:12
+    10| </head>
+    11| <body ng-controller="newsController">
+ >> 12|     <%- include('partials/header'); %>
+    13| 
+    14|   <!-- Sorting Controls -->
+    15|   <div class="container mt-4">
+
+D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\partials\header.ejs:12
+    10|     
+    11|     <nav>
+ >> 12|         <a href="/" class="<%= activePage === '/' ? 'active' : '' %>">Home</a>
+    13|         <a href="/news" class="<%= activePage === '/news' ? 'active' : '' %>">News</a>
+    14|         <a href="/trends" class="<%= activePage === '/trends' ? 'active' : '' %>">Trends</a>
+    15|         <a href="/shop/indexshop.html" class="<%= activePage === '/shop/indexshop.html' ? 'active' : '' %>">Shops</a>
+
+activePage is not defined
+20241119	20:16:04	1197bcf1-95bb-4b11-aced-3783353016a9	ReferenceError: D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\news.ejs:12
+    10| </head>
+    11| <body ng-controller="newsController">
+ >> 12|     <%- include('partials/header'); %>
+    13| 
+    14|   <!-- Sorting Controls -->
+    15|   <div class="container mt-4">
+
+D:\SEMESTER 2\FRONT-END PROGRAMMING\UAS\UAS_KELOMPOK4\views\partials\header.ejs:12
+    10|     
+    11|     <nav>
+ >> 12|         <a href="/" class="<%= activePage === '/' ? 'active' : '' %>">Home</a>
+    13|         <a href="/news" class="<%= activePage === '/news' ? 'active' : '' %>">News</a>
+    14|         <a href="/trends" class="<%= activePage === '/trends' ? 'active' : '' %>">Trends</a>
+    15|         <a href="/shop/indexshop.html" class="<%= activePage === '/shop/indexshop.html' ? 'active' : '' %>">Shops</a>
+
+activePage is not defined

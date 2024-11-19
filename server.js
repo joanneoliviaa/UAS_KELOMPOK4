@@ -12,6 +12,7 @@ const authRoutes = require('./routes/authRoutes');
 const bodyParser = require('body-parser');
 const mediaRoutes = require('./routes/mediaRoutes');
 const mediaController = require('./controllers/mediaController'); 
+const newsRoutes = require('./routes/newsRoutes');
 const PORT = process.env.PORT || 3500;
 
 //Middleware
@@ -57,6 +58,8 @@ app.get('/trends', (req, res) => {
 app.get('/trends/:season', mediaController.renderTrendsPage);
 
 app.use('/trends', mediaRoutes); 
+
+app.use('/news', newsRoutes);
 
 app.use(errorHandler);
 
