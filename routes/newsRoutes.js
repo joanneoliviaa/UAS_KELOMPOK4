@@ -24,18 +24,21 @@ router.get('/api/news', async (req, res) => {
   }
 });
 
-// Endpoint untuk mendapatkan artikel detail
+router.get('/:id', async (req, res) => {
+  res.render('articles', { activePage: '/news' }); // Hanya render template
+});
+
 router.get('/api/news/:id', async (req, res) => {
   const newsId = req.params.id;
   try {
     const result = await db.query('SELECT * FROM news WHERE id = $1', [newsId]);
     if (result.rows.length === 0) {
-      return res.status(404).json({ success: false, message: 'News not found' });
+      return res.status(404).json({ message: 'News not found' });
     }
-    res.json({ success: true, article: result.rows[0] });
+    res.json(result.rows[0]); // Kirim data artikel
   } catch (error) {
     console.error(error);
-    res.status(500).json({ success: false, message: 'Server error' });
+    res.status(500).json({ message: 'Server error' });
   }
 });
 

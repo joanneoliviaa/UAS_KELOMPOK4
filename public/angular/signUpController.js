@@ -1,12 +1,10 @@
 const app = angular.module('authApp', []);
 
 app.controller('SignupController', function ($scope, $http, $window) {
-  // Inisialisasi variabel
   $scope.user = {};
   $scope.errorMessage = '';
   $scope.successMessage = '';
 
-  // Fungsi untuk Sign Up
   $scope.signup = function () {
     var data = {
       full_name: $scope.user.full_name,
@@ -21,7 +19,7 @@ app.controller('SignupController', function ($scope, $http, $window) {
         $scope.successMessage = 'Sign Up successful! Redirecting to Sign In page.';
         $scope.errorMessage = '';
         setTimeout(() => {
-          $window.location.href = '/auth/signin'; // Redirect ke halaman Sign In
+          $window.location.href = '/auth/signin';
         }, 2000);
       })
       .catch(error => {

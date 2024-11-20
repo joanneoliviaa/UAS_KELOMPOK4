@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/css/news.css">
 </head>
 <body ng-controller="newsController">
-    <%- include('partials/header'); %>
+  <%- include('partials/header'); %>
 
   <!-- Sorting Controls -->
   <div class="container mt-4">
@@ -23,12 +23,22 @@
     </div>
 
     <!-- News List -->
-    <div class="news-item" ng-repeat="news in newsList | orderBy:sortOrder">
-      <h3><a href="#" ng-click="openArticle(news.id)">{{ news.title }}</a></h3>
-      <img ng-if="news.image_url" ng-src="{{ news.image_url }}" alt="{{ news.title }}" class="img-fluid">
-      <p>{{ news.content }}</p>
+    <div class="row">
+      <div class="col-md-6 mb-4" ng-repeat="news in newsList | orderBy:sortOrder">
+        <div class="card h-100">
+          <img ng-if="news.image_url" ng-src="{{ news.image_url }}" class="card-img-top" alt="{{ news.title }}">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="/news/{{ news.id }}" ng-click="openArticle(news.id)">{{ news.title }}</a>
+            </h5>
+            <p class="card-text">{{ news.full_article | limitTo: 100 }}...</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">By {{ news.author }}</small>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
   <script>
     angular.module('newsApp', [])
@@ -41,7 +51,7 @@
         });
 
         $scope.openArticle = function(newsId) {
-          console.log('Artikel ID:', newsId);
+          console.log('Redirecting to:', `/news/${newsId}`);
         };
       });
   </script>

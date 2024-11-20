@@ -5,7 +5,6 @@ app.controller('SigninController', function ($scope, $http) {
         .then(response => {
           localStorage.setItem('token', response.data.token);
           alert('Login successful');
-          // Redirect ke halaman lain setelah login berhasil
         })
         .catch(error => {
           alert(error.data.message || 'Error occurred');
