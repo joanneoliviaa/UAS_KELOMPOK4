@@ -8,25 +8,25 @@
     --font-size-base: 1rem;
     --border-radius: 8px;
     --transition-speed: 0.3s;
-}   
-
-/* Basic Styles */
-* {
+  }   
+  
+  /* Basic Styles */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif; 
-}
-
-body {
+  }
+  
+  body {
     font-family: var(--font-primary);
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
-}
-
-/* Header Styles */
-header {
+  }
+  
+  /* Header Styles */
+  header {
     width: 100%;
     background-color: #ffffff;
     padding: 20px 6%;
@@ -39,24 +39,24 @@ header {
     z-index: 1000;
     letter-spacing: 2px;
     font-weight: bolder;
-}
-
-.logo img {
+  }
+  
+  .logo img {
     height: 40px; 
     width: 140px; 
     display: block; 
   }
-
-nav a {
+  
+  nav a {
     margin: 0 15px;
     text-decoration: none;
     font-size: 1.1em;
     color: #000;
     position: relative; 
     transition: color 0.3s ease;
-}
-
-nav a::after {
+  }
+  
+  nav a::after {
     content: '';
     position: absolute;
     width: 0; 
@@ -65,15 +65,15 @@ nav a::after {
     bottom: -5px;
     left: 0;
     transition: width 0.3s ease; 
-}
-
-nav a.active::after, 
-nav a:hover::after {
+  }
+  
+  nav a.active::after, 
+  nav a:hover::after {
     width: 100%; 
-}
-
-
-#sign-up-btn {
+  }
+  
+  
+  #sign-up-btn {
     background: white;
     color: rgb(4, 4, 4);
     padding: 10px 20px;
@@ -82,102 +82,119 @@ nav a:hover::after {
     font-weight: bold;
     text-decoration: none;
     transition: background 0.3s ease;
-}
-
-#sign-up-btn:hover {
+  }
+  
+  #sign-up-btn:hover {
     background-color: rgba(198, 196, 196, 0.237);
-}
-
-.menu-icon {
+  }
+  
+  .menu-icon {
     display: none;
     font-size: 30px;
     cursor: pointer;
-}
-
-#check {
+  }
+  
+  #check {
     display: none;
-}
-
-#check:checked ~ nav {
+  }
+  
+  #check:checked ~ nav {
     left: 0;
     opacity: 1;
-}
+  }
+
   .container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #fff;
+    max-width: 450px;
+    background-color: #fff;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-top: 20px;
+  /* Header */
+  h2 {
     font-size: 2rem;
-    color: #343a40;
-    margin-bottom: 20px;
     text-align: center;
-    padding-bottom: 10px;
-  }
-  
-  /* Image Styles */
-  img {
-    display: flex;
-    max-width: 100px;
-    height: 500px;
-    border-radius: 8px;
-    margin: 20px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Article Text */
-  p {
-    padding: 100px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.1rem;
-    color: #495057;
+    color: #007bff;
     margin-bottom: 20px;
-    line-height: 1.8;
-    text-align: justify;
   }
   
-  /* Back Button */
-  a.btn {
-    display: inline-block;
-    font-size: 1rem;
+  /* Labels */
+  label {
     font-weight: bold;
-    text-transform: uppercase;
-    padding: 10px 20px;
+    color: #555;
+  }
+  
+  /* Input Fields */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="date"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  /* Button */
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #007bff;
     color: #fff;
-    background-color: #6c757d;
     border: none;
     border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+  }
+  
+  button:disabled {
+    background-color: #d6d6d6;
+    cursor: not-allowed;
+  }
+  
+  /* Link */
+  p {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+  
+  p a {
+    color: #007bff;
     text-decoration: none;
-    transition: background-color 0.3s ease-in-out;
+    font-weight: bold;
   }
   
-  a.btn:hover {
-    background-color: #5a6268;
+  p a:hover {
+    text-decoration: underline;
   }
   
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
+  /* Responsive Design */
+  @media (max-width: 576px) {
     .container {
-      margin: 20px;
-      padding: 15px;
+      width: 90%;
+      padding: 20px;
     }
   
-    h1 {
-      font-size: 1.8rem;
-    }
-  
-    p {
-      font-size: 1rem;
-    }
-  
-    a.btn {
-      font-size: 0.9rem;
+    h2 {
+      font-size: 1.5rem;
     }
   }
-  
