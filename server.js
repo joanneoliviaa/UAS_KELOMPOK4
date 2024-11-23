@@ -55,6 +55,10 @@ app.get('/trends', (req, res) => {
     res.render('trends/trends', { activePage: '/trends' });  
 });
 
+app.get('/indexshop', (req, res) => {
+  res.render('shop/indexshop', { activePage: '/indexshop' });  
+});
+
 app.get('/trends/:season', mediaController.renderTrendsPage);
 
 app.use('/trends', mediaRoutes); 
