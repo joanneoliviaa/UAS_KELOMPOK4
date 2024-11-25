@@ -103,23 +103,14 @@ nav a:hover::after {
   opacity: 1;
 }
 /* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
   
   .container {
     max-width: 400px;
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
+    margin-left: 40%;
+    margin-top: 10%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
