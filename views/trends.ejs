@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trends</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <link rel="stylesheet" href="css/trends/trends.css">
+  <script src="/angular/app.js"></script>
+</head>
+<body ng-controller="FashionTrendsController">
+
+    <!-- Header Partial -->
+    <%- include('partials/header', { activePage: '/trends' }) %>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <h2 class="text-center">Stay Inspired</h2>
+        <h3 class="text-center mb-5">Your fashion journey begins here</h3>
+
+        <!-- Search Bar -->
+        <div class="d-flex justify-content-center mb-4">
+            <input type="text" ng-model="searchQuery" class="form-control w-50" placeholder="Looking for something ?" ng-change="search()">
+        </div>
+
+        <!-- Display Filtered Items -->
+        <div class="row" ng-repeat="item in filteredItems">
+            <div class="col-12 col-md-6 mb-4">
+                <a href="/trends/{{item.category}}" class="card" style="text-decoration: none;">
+                    <img src="/img/trends/{{item.category}}/{{item.image}}" class="card-img-top" alt="{{item.category}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.title}}</h5>
+                        <p class="card-text">{{item.description}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p>&copy; 2024 Lifestyle Website. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#" class="text-white mx-3">Instagram</a>
+            <a href="#" class="text-white mx-3">Facebook</a>
+            <a href="#" class="text-white mx-3">Twitter</a>
+        </div>
+    </footer>
+
+    <script>
+        angular.module('app') 
+        .controller('FashionTrendsController', function($scope) {
+            console.log('FashionTrendsController registered');
+            $scope.items = [
+                { category: 'autumn', title: 'Autumn', description: 'A season of rich colors, cozy textures, and a shift in style.', image: 'autumn1.jpg' },
+                { category: 'summer', title: 'Summer', description: 'With the summer heat looming large, cooler clothing is a must.', image: 'summer2.jpg' },
+                { category: 'spring', title: 'Spring', description: 'Spring brings a breath of fresh air with gentle breezes and flowers.', image: 'spring1.jpg' },
+                { category: 'winter', title: 'Winter', description: 'Winter arrives, bringing with it crisp apples and cozy fashion.', image: 'winter1.jpg' }
+            ];
+            
+            $scope.filteredItems = angular.copy($scope.items);
+            
+            $scope.search = function() {
+                const query = $scope.searchQuery ? $scope.searchQuery.toLowerCase() : '';
+                if (query) {
+                    $scope.filteredItems = $scope.items.filter(function(item) {
+                    return item.title.toLowerCase().includes(query) ||
+                    item.description.toLowerCase().includes(query) ||
+                    item.category.toLowerCase().includes(query);
+                });
+            } else {
+                $scope.filteredItems = angular.copy($scope.items);
+            }
+        };
+    });
+    </script>
+</body>
+</html>

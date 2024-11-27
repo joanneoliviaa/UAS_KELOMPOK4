@@ -36,9 +36,11 @@ router.post('/signin', async (req, res) => {
 // Check Login
 router.get('/check-login', (req, res) => {
   if (req.session && req.session.userId) {
-    res.json({ loggedIn: true });
+    const userName = req.session.userName;
+    const userID = req.session.id;
+    res.json({ loggedIn: true, userName: userName, userID: userID });
   } else {
-    res.json({ loggedIn: false });
+    res.json({ loggedIn: false});
   }
 });
 

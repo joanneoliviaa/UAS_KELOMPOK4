@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="newsApp">
+<html lang="en" ng-app="app">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,8 +40,8 @@
       </div>
     </div>
 
-  <script>
-    angular.module('newsApp', [])
+    <script>
+      angular.module('app') 
       .controller('newsController', function($scope, $http) {
         $scope.newsList = [];
         $scope.sortOrder = 'title'; 
@@ -54,6 +54,6 @@
           console.log('Redirecting to:', `/news/${newsId}`);
         };
       });
-  </script>
+    </script>
 </body>
 </html>

@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 3500;
 
 //Middleware
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(session({
@@ -52,7 +52,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/trends', (req, res) => {
-    res.render('trends/trends', { activePage: '/trends' });  
+  res.render('trends');  
 });
 
 app.get('/indexshop', (req, res) => {

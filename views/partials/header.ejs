@@ -1,27 +1,69 @@
-<header>
-    <input type="checkbox" name="" id="check">
-    <label for="check" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
-    
+<header ng-controller="HeaderController">
     <h1 class="logo">
       <a href="/">
-          <img src="/img/malika.jpg" alt="logo">
+        <img src="/img/malika.jpg" alt="logo">
       </a>
     </h1>
-    
+  
     <nav>
-        <a href="/" class="<%= activePage === '/' ? 'active' : '' %>">Home</a>
-        <a href="/news" class="<%= activePage === '/news' ? 'active' : '' %>">News</a>
-        <a href="/trends" class="<%= activePage === '/trends' ? 'active' : '' %>">Trends</a>
-        <a href="/indexshop" class="<%= activePage === '/indexshop' ? 'active' : '' %>">Shops</a>
+      <a href="/" ng-class="{'active': activePage === '/'}">Home</a>
+      <a href="/news" ng-class="{'active': activePage === '/news'}">News</a>
+      <a href="/trends" ng-class="{'active': activePage === '/trends'}">Trends</a>
+      <a href="/indexshop" ng-class="{'active': activePage === '/indexshop'}">Shops</a>
     </nav>
-    
-    <% if (session.userId) { %> 
-        <a href="#" class="btn">
-            <i class="fas fa-user"></i><%= session.userName %> 
-        </a>
-    <% } else { %> 
-        <a href="/auth/signin" class="btn" id="sign-up-btn">
-            <i class="fas fa-user"></i> Sign In
-        </a>
-    <% } %>
-</header>
+  
+    <!-- Conditional display of Sign In or Username -->
+    <span ng-if="!isLoggedIn()"> <!-- If the user is NOT logged in -->
+      <a href="/auth/signin">Sign In</a>
+    </span>
+    <span ng-if="isLoggedIn()"> <!-- If the user is logged in -->
+      <span>{{ userName }}</span> 
+    </span>
+  </header>
+  
+<script>
+    angular.module('app', [])
+    .controller('HeaderController', function($scope, $http, $window) {
+        // Determine the active page based on the current path
+        $scope.activePage = window.location.pathname;
+        console.log('Initial activePage:', $scope.activePage);
+
+        // Update activePage whenever the URL changes
+        $scope.$on('$locationChangeSuccess', function() {
+            $scope.activePage = window.location.pathname;
+            console.log('Updated activePage:', $scope.activePage);
+        });
+
+        // Flag to prevent multiple calls to check login
+        $scope.loggedInChecked = false;
+
+        // Function to check if the user is logged in
+        $scope.isLoggedIn = function() {
+            // Check if we've already checked the login status
+            if (!$scope.loggedInChecked) {
+                console.log('Checking login status...');
+                $http.get('/auth/check-login')  // Make sure the path is correct
+                    .then(function(response) {
+                        console.log('Login check response:', response); // Debugging the response
+                        if (response.data.loggedIn) {
+                            // If logged in, store user data in scope
+                            $scope.userName = response.data.userName; // Assuming you send the username in the response
+                        } else {
+                            $scope.userName = null; // User is not logged in
+                        }
+                        // Set the flag to true after the check is done
+                        $scope.loggedInChecked = true;
+                    })
+                    .catch(function(error) {
+                        console.error('Error checking login status:', error);
+                    });
+            }
+
+            // Return whether the user is logged in (based on the name being set)
+            return $scope.userName !== null;
+        };
+
+        // Initialize by checking login status
+        $scope.isLoggedIn();
+    });
+</script>
