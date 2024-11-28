@@ -1,45 +1,67 @@
 const express = require('express');
 const router = express.Router();
-const Comment = require('../models/comment');
-const { isAuthenticated } = require('../middlewares/authMiddleware');
+const db = require('../model/db');
 
-// Menampilkan komentar untuk media tertentu berdasarkan season
+// Get comments for a specific media item by season
 router.get('/trends/:season/:mediaId/comments', (req, res) => {
     const { season, mediaId } = req.params;
-  
-    // Query untuk mengambil komentar
-    db.query(
-      'SELECT c.content, u.name as user_name FROM comments c JOIN users u ON c.user_id = u.id WHERE c.season = $1 AND c.media_id = $2',
-      [season, mediaId],
-      (err, result) => {
-        if (err) {
-          return res.status(500).json({ message: 'Error fetching comments.' });
-        }
-        res.json({ comments: result.rows });
-      }
-    );
-  });
 
-  // Menambahkan komentar untuk media tertentu berdasarkan season
-router.post('/trends/:season/:mediaId/comments', (req, res) => {
-    const { season, mediaId } = req.params;
-    const { userId, content } = req.body;
-  
-    if (!userId || !content) {
-      return res.status(400).json({ message: 'Missing userId or content.' });
-    }
-  
-    // Menyimpan komentar ke database
     db.query(
-      'INSERT INTO comments (season, media_id, user_id, content) VALUES ($1, $2, $3, $4) RETURNING *',
-      [season, mediaId, userId, content],
-      (err, result) => {
-        if (err) {
-          return res.status(500).json({ message: 'Error posting comment.' });
+        `SELECT 
+            c.content, 
+            u.full_name AS user_name 
+        FROM 
+            comments c 
+        LEFT JOIN 
+            users u ON c.user_id = u.id
+        JOIN 
+            media_content m ON c.media_id = m.id
+        WHERE 
+            m.season = $1 AND c.media_id = $2`,
+        [season, mediaId],
+        (err, result) => {
+            if (err) {
+                console.error('Database query error:', err);
+                return res.status(500).json({ message: 'Error fetching comments.' });
+            }
+            res.json({ comments: result.rows });
         }
-        res.json({ comment: result.rows[0] });
-      }
     );
-  });  
+});
+
+// Post a comment for a specific media item by season
+router.post('/trends/:season/:mediaId/comments', async (req, res) => {
+    const { mediaId } = req.params; // Only mediaId is needed for comment association
+    const { content } = req.body;  // Extract content from the request body
+
+    // Validate the input
+    if (!content || content.trim() === '') {
+        return res.status(400).json({ message: 'Comment content cannot be empty.' });
+    }
+
+    try {
+        const userId = req.session?.userId || null; // Use session userId if logged in, else NULL
+        const result = await db.query(
+            `INSERT INTO comments (media_id, user_id, content) 
+             VALUES ($1, $2, $3) 
+             RETURNING id, content, created_at`,
+            [mediaId, userId, content]
+        );
+
+        const newComment = {
+            id: result.rows[0].id,
+            content: result.rows[0].content,
+            created_at: result.rows[0].created_at,
+            user_name: userId
+                ? (await db.query('SELECT full_name FROM users WHERE id = $1', [userId])).rows[0]?.full_name
+                : 'Anonymous', // Use 'Anonymous' if userId is null
+        };
+
+        res.status(201).json({ comment: newComment });
+    } catch (err) {
+        console.error('Error posting comment:', err);
+        res.status(500).json({ message: 'Error posting comment.' });
+    }
+});
 
 module.exports = router;

@@ -38,7 +38,7 @@ app.use(express.json());
 
 // Middleware untuk menyediakan session ke dalam view
 app.use((req, res, next) => {
-    res.locals.session = req.session; 
+    res.locals.session = req.session || {}; 
     next();
   });
 

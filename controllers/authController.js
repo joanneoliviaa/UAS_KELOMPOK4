@@ -50,7 +50,6 @@ const signup = async (req, res) => {
   }
 };
 
-
 // Endpoint Sign In
 const signin = async (req, res) => {
   const { email, password } = req.body;
@@ -74,8 +73,10 @@ const signin = async (req, res) => {
       return res.render('signin', { message: 'Invalid email or password', activePage: '/signin' });
     }
 
-    // If credentials are valid, redirect to index page
-    res.redirect('/');
+    // If credentials are valid, save session and redirect
+    req.session.userId = user.rows[0].id;
+    req.session.userName = user.rows[0].full_name;  
+    res.redirect('/'); // Successful login, redirect to home page
   } catch (err) {
     console.error(err.message);
     res.status(500).json({ message: 'Internal server error' });
@@ -92,4 +93,13 @@ const renderSignUpPage = (req, res) => {
   res.render('signup', { activePage: '/signup', message: '' });
 };
 
-module.exports = { signup, signin, renderSigninPage, renderSignUpPage };
+// Check Login Status (for isLoggedIn function in frontend)
+const checkLogin = (req, res) => {
+  if (req.session && req.session.userId) {
+    res.json({ loggedIn: true, userName: req.session.userName, userId: req.session.userId });
+  } else {
+    res.json({ loggedIn: false });
+  }
+};
+
+module.exports = { signup, signin, renderSigninPage, renderSignUpPage, checkLogin };

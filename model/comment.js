@@ -1,17 +1,17 @@
-const db = require('./db');
+const db = require('./db'); // Database connection
 
 const Comment = {
-  // Menambahkan komentar
-  create: async (userId, mediaId, content) => {
-    const result = await db.query('INSERT INTO comments (user_id, media_id, content) VALUES (?, ?, ?)', [userId, mediaId, content]);
-    return result.insertId;
-  },
-  
-  // Mengambil komentar berdasarkan mediaId
-  findByMediaId: async (mediaId) => {
-    const result = await db.query('SELECT comments.*, users.email FROM comments JOIN users ON comments.user_id = users.id WHERE comments.media_id = ? ORDER BY comments.created_at DESC', [mediaId]);
-    return result;
-  },
+    // Add a comment
+    create: async (userId, mediaId, content) => {
+        const result = await db.query(
+            'INSERT INTO comments (user_id, media_id, content) VALUES ($1, $2, $3) RETURNING id',
+            [userId, mediaId, content]
+        );
+        return result.rows[0].id; // Return the new comment's ID
+    },
+
+    // Get comments for a specific media item
+    
 };
 
 module.exports = Comment;
