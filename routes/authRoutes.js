@@ -13,25 +13,23 @@ router.post('/signup', signup);
 
 // POST: Sign In
 router.post('/signin', async (req, res) => {
-    const { email, password } = req.body;
-  
-    const user = await User.findByEmail(email);
-  
-    if (!user) {
-      return res.status(401).json({ message: 'Invalid credentials' });
-    }
-  
-    if (user.password !== password) {
-      return res.status(401).json({ message: 'Invalid credentials' });
-    }
-  
-    // Simpan informasi user di session, termasuk nama
-    req.session.userId = user.id;
-    req.session.userName = user.full_name;  
-    
-    // Redirect ke halaman utama
-    res.redirect('/');
-  });
+  const { email, password } = req.body;
+
+  const user = await User.findByEmail(email);
+
+  if (!user) {
+    return res.render('signin', { message: 'Invalid credentials', activePage: '/signin' });
+  }
+
+  if (user.password !== password) {
+    return res.render('signin', { message: 'Invalid credentials', activePage: '/signin' });
+  }
+
+  req.session.userId = user.id;
+  req.session.userName = user.full_name;
+
+  res.redirect('/');
+});
 
 // Check Login
 router.get('/check-login', (req, res) => {

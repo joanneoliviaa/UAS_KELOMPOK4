@@ -71,7 +71,14 @@ nav a:hover::after {
     width: 100%;
 }
 
+.no-style-link {
+    color: inherit;
+    text-decoration: none; 
+}
 
+.no-style-link:hover{
+    color: #725b36;
+}
 
 #sign-up-btn {
     background: white;
