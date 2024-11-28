@@ -12,19 +12,17 @@
       <a href="/indexshop" ng-class="{'active': activePage === '/indexshop'}">Shops</a>
     </nav>
   
-    <!-- Conditional display of Sign In or Username -->
-    <span ng-if="!isLoggedIn()"> <!-- If the user is NOT logged in -->
+    <span ng-if="!isLoggedIn()"> 
       <a href="/auth/signin">Sign In</a>
     </span>
-    <span ng-if="isLoggedIn()"> <!-- If the user is logged in -->
-        <a href="/profile">{{ userName }}</a>
+    <span ng-if="isLoggedIn()"> 
+        <a href="/profile" class="no-style-link">{{ userName }}</a>
     </span>
   </header>
   
 <script>
     angular.module('app', [])
     .controller('HeaderController', function($scope, $http, $window) {
-        // Determine the active page based on the current path
         $scope.activePage = window.location.pathname;
         console.log('Initial activePage:', $scope.activePage);
 
@@ -35,30 +33,24 @@
         return $scope.activePage === page;
     };
 
-        // Update activePage whenever the URL changes
         $scope.$on('$locationChangeSuccess', function() {
             $scope.activePage = window.location.pathname;
             console.log('Updated activePage:', $scope.activePage);
         });
 
-        // Flag to prevent multiple calls to check login
         $scope.loggedInChecked = false;
 
-        // Function to check if the user is logged in
         $scope.isLoggedIn = function() {
-            // Check if we've already checked the login status
             if (!$scope.loggedInChecked) {
                 console.log('Checking login status...');
-                $http.get('/auth/check-login')  // Make sure the path is correct
+                $http.get('/auth/check-login') 
                     .then(function(response) {
-                        console.log('Login check response:', response); // Debugging the response
+                        console.log('Login check response:', response); 
                         if (response.data.loggedIn) {
-                            // If logged in, store user data in scope
-                            $scope.userName = response.data.userName; // Assuming you send the username in the response
+                            $scope.userName = response.data.userName; 
                         } else {
-                            $scope.userName = null; // User is not logged in
+                            $scope.userName = null; 
                         }
-                        // Set the flag to true after the check is done
                         $scope.loggedInChecked = true;
                     })
                     .catch(function(error) {
@@ -66,11 +58,9 @@
                     });
             }
 
-            // Return whether the user is logged in (based on the name being set)
             return $scope.userName !== null;
         };
 
-        // Initialize by checking login status
         $scope.isLoggedIn();
     });
 </script>
