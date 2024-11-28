@@ -3,6 +3,8 @@ const router = express.Router();
 const { getData, addData } = require('../controllers/controller');
 const  db  = require('../model/db');
 const User = require('../model/user');
+const Product = require('../model/product');
+const { getAllProducts } = require('../controllers/productController');
 
 // Route untuk mengambil data
 router.get('/data', getData);
@@ -84,5 +86,8 @@ router.post('/auth/update-password', async (req, res) => {
       res.status(500).json({ message: 'Internal server error' });
     }
   });
+
+  // Route untuk mengambil semua produk
+  router.get('/indexshop', getAllProducts); // Menggunakan controller untuk mendapatkan produk
 
 module.exports = router;

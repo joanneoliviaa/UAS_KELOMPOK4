@@ -13,6 +13,7 @@ const bodyParser = require('body-parser');
 const mediaRoutes = require('./routes/mediaRoutes');
 const mediaController = require('./controllers/mediaController'); 
 const newsRoutes = require('./routes/newsRoutes');
+const productRoutes = require('./routes/routes');
 const PORT = process.env.PORT || 3500;
 
 //Middleware
@@ -75,6 +76,8 @@ app.get('/profile', (req, res) => {
       res.redirect('/auth/signin');
   }
 });
+
+app.use('/', productRoutes);
 
 app.use('/auth', newsRoutes);
 
