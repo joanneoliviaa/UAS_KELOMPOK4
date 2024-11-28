@@ -9,7 +9,7 @@ angular.module('commentsApp', [])
     $scope.userId = null;
 
     // Fetch existing comments
-    $http.get(/api/trends/${season}/${mediaId}/comments)
+    $http.get(`/api/trends/${season}/${mediaId}/comments`)
       .then(function(response) {
         $scope.comments = response.data.comments;
       })
@@ -20,7 +20,7 @@ angular.module('commentsApp', [])
     // Add a new comment
     $scope.addComment = function() {
       if ($scope.newComment.trim()) {
-        $http.post(/api/trends/${season}/${mediaId}/comments, {
+        $http.post(`/api/trends/${season}/${mediaId}/comments`, {
           content: $scope.newComment // Only send content
         })
         .then(function(response) {
