@@ -5500,3 +5500,5 @@ Could not find the include file "../partials/header"
 20241127	23:21:14	a3b59f52-eafd-4911-a19a-fb118bf739d4	ReferenceError: userName is not defined
 20241127	23:21:14	1269408b-e1b1-4e0e-90ca-e9285f2c5ee4	ReferenceError: userName is not defined
 20241127	23:21:14	a291a518-610e-4657-9fa6-89ce2beba52f	ReferenceError: userName is not defined
+20241128	10:30:35	4293a715-4ae0-49d0-a724-f1bdb8c0fdba	ReferenceError: User is not defined
+20241128	10:35:15	1c4104c3-0113-43bd-bd47-73d70ef0a2c9	TypeError: User.findByIdAndDelete is not a function

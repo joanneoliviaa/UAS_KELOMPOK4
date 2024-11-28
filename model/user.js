@@ -22,6 +22,11 @@ const User = {
     const result = await query('SELECT * FROM users WHERE email = $1', [email]);
     return result.rows[0]; // Mengembalikan user pertama yang ditemukan
   },
+
+  deleteById: async (id) => {
+    const result = await query('DELETE FROM users WHERE id = $1 RETURNING *', [id]);
+    return result.rowCount > 0; // Mengembalikan true jika user berhasil dihapus
+  },
 };
 
 module.exports = User;
