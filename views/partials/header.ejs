@@ -8,7 +8,7 @@
     <nav>
       <a href="/" ng-class="{'active': activePage === '/'}">Home</a>
       <a href="/news" ng-class="{'active': activePage === '/news'}">News</a>
-      <a href="/trends" ng-class="{'active': activePage === '/trends'}">Trends</a>
+      <a href="/trends" ng-class="{'active': isActive('/trends')}">Trends</a>
       <a href="/indexshop" ng-class="{'active': activePage === '/indexshop'}">Shops</a>
     </nav>
   
@@ -27,6 +27,13 @@
         // Determine the active page based on the current path
         $scope.activePage = window.location.pathname;
         console.log('Initial activePage:', $scope.activePage);
+
+        $scope.isActive = function (page) {
+        if (page === '/trends') {
+            return $scope.activePage.startsWith('/trends');
+        }
+        return $scope.activePage === page;
+    };
 
         // Update activePage whenever the URL changes
         $scope.$on('$locationChangeSuccess', function() {
