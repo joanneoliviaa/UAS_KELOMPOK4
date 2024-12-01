@@ -14,6 +14,7 @@ const mediaRoutes = require('./routes/mediaRoutes');
 const mediaController = require('./controllers/mediaController'); 
 const newsRoutes = require('./routes/newsRoutes');
 const productRoutes = require('./routes/routes');
+const cartRoutes = require('./routes/routes');
 const PORT = process.env.PORT || 3500;
 
 //Middleware
@@ -78,6 +79,8 @@ app.get('/profile', (req, res) => {
 });
 
 app.use('/', productRoutes);
+
+app.use('/', cartRoutes);
 
 app.use('/auth', newsRoutes);
 

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+   <!-- Header Section -->
+   <%- include('../partials/header', { activePage: '/indexshop' }) %>
+
+<!-- Shop Section -->
+<section id="shop" class="shop">
+    <h1>Your Cart</h1>
+    <div class="cart-container">
+        <% if (cartItems.length === 0) { %>
+            <p>Your cart is empty.</p>
+        <% } else { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% cartItems.forEach(item => { %>
+                        <tr>
+                            <td><%= item.product_name %></td>
+                            <td>
+                                <form action="/cart/update/<%= item.product_id %>" method="POST">
+                                    <button type="submit" name="action" value="decrease">-</button>
+                                    <input type="text" name="quantity" value="<%= item.quantity %>" readonly>
+                                    <button type="submit" name="action" value="increase">+</button>
+                                </form>
+                            </td>
+                            <td><%= item.price * item.quantity %></td>
+                            <td>
+                                <form action="/cart/delete/<%= item.product_id %>" method="POST">
+                                    <button type="submit">Remove</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+            <p>Total: <%= total %></p>
+        <% } %>
+    </div>
+
+    <a href="/indexshop" class="btn btn-primary">Back to Shopping</a>
+</section>
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Lifestyle Website. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            var currentPath = window.location.pathname;
+            var navLinks = document.querySelectorAll('nav a');
+    
+            navLinks.forEach(function(link) {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        </script>
+</body>
+</html>

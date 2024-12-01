@@ -38,6 +38,10 @@
                     <h3><%= product.name %></h3>
                     <p><%= product.description %></p>
                     <p>Price: $<%= product.price %></p>
+                    <form action="/cart/add" method="POST">
+                        <input type="hidden" name="productId" value="<%= product.id %>">
+                        <button type="submit">Add to Cart</button>
+                    </form>
                 </div>
             <% }) %>
         <% } else { %>
@@ -58,7 +62,6 @@
         </div>
     </footer>
 
-    <script src="scriptshop.js"></script>
     <script>
         window.onload = function() {
             var currentPath = window.location.pathname;

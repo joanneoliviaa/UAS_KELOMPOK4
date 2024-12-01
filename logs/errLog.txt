@@ -5502,3 +5502,50 @@ Could not find the include file "../partials/header"
 20241127	23:21:14	a291a518-610e-4657-9fa6-89ce2beba52f	ReferenceError: userName is not defined
 20241128	10:30:35	4293a715-4ae0-49d0-a724-f1bdb8c0fdba	ReferenceError: User is not defined
 20241128	10:35:15	1c4104c3-0113-43bd-bd47-73d70ef0a2c9	TypeError: User.findByIdAndDelete is not a function
+20241201	12:57:50	fc3a51b7-395a-42d5-bd00-975233c6535e	Error: Failed to lookup view "cart" in views directory "C:\BUAT KULIAH\Frontend\UAS_KEL4\UAS_KELOMPOK4\views"
+20241201	13:00:24	34ae6690-3bdd-4b64-95b3-1db3cb106cef	Error: Failed to lookup view "cart" in views directory "C:\BUAT KULIAH\Frontend\UAS_KEL4\UAS_KELOMPOK4\views"
+20241201	14:36:00	0a0ce4d2-bcb6-4245-bc6d-1b43f71e9f60	ReferenceError: C:\BUAT KULIAH\Frontend\UAS_KEL4\UAS_KELOMPOK4\views\shop\cart.ejs:52
+    50|                 </tbody>
+    51|             </table>
+ >> 52|             <p>Total: <%= total %></p>
+    53|         <% } %>
+    54|     </div>
+    55| </section>
+
+total is not defined
+20241201	14:39:24	e6e06b95-cda1-44b2-86b9-db0a680b75a7	ReferenceError: C:\BUAT KULIAH\Frontend\UAS_KEL4\UAS_KELOMPOK4\views\shop\cart.ejs:52
+    50|                 </tbody>
+    51|             </table>
+ >> 52|             <p>Total: <%= total %></p>
+    53|         <% } %>
+    54|     </div>
+    55| </section>
+
+total is not defined
+20241201	14:40:40	dee67107-6eb7-459e-87be-c0904e3a9ff9	ReferenceError: C:\BUAT KULIAH\Frontend\UAS_KEL4\UAS_KELOMPOK4\views\shop\cart.ejs:52
+    50|                 </tbody>
+    51|             </table>
+ >> 52|             <p>Total: <%= total %></p>
+    53|         <% } %>
+    54|     </div>
+    55| </section>
+
+total is not defined
+20241201	14:41:44	4efacd2d-f383-4a11-acec-8abab264f917	ReferenceError: C:\BUAT KULIAH\Frontend\UAS_KEL4\UAS_KELOMPOK4\views\shop\cart.ejs:52
+    50|                 </tbody>
+    51|             </table>
+ >> 52|             <p>Total: <%= total %></p>
+    53|         <% } %>
+    54|     </div>
+    55| </section>
+
+total is not defined
+20241201	14:42:39	9e84d8ec-192a-4d9b-ab42-64b15fb5e1c9	ReferenceError: C:\BUAT KULIAH\Frontend\UAS_KEL4\UAS_KELOMPOK4\views\shop\cart.ejs:52
+    50|                 </tbody>
+    51|             </table>
+ >> 52|             <p>Total: <%= total %></p>
+    53|         <% } %>
+    54|     </div>
+    55| </section>
+
+total is not defined
