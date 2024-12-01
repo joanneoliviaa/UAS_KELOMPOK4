@@ -37,14 +37,24 @@
             <h5>Comments:</h5>
             <div class="comment mb-3" ng-repeat="comment in comments">
               <strong>{{ comment.user_name || 'Anonymous' }}:</strong>
-              <p>{{ comment.content }}</p>
-              
-              <!-- Edit and Delete buttons (only for the comment's owner) -->
-              <div ng-if="comment.user_id === userId">
-                <button class="btn btn-warning btn-sm" ng-click="editComment(comment)">Edit</button>
-                <button class="btn btn-danger btn-sm" ng-click="deleteComment(comment.id)">Delete</button>
+            
+              <!-- Display mode -->
+              <div ng-if="!comment.isEditing">
+                <p>{{ comment.content }}</p>
+                <div ng-if="isOwner(comment)">
+                  <button class="btn btn-sm btn-warning me-2" ng-click="comment.isEditing = true; comment.editContent = comment.content">Edit</button>
+                  <button class="btn btn-sm btn-danger" ng-click="deleteComment(comment.id)">Delete</button>
+                </div>
               </div>
-            </div>
+            
+              <!-- Edit mode -->
+              <div ng-if="comment.isEditing">
+                <textarea ng-model="comment.editContent" class="form-control mb-2" rows="2"></textarea>
+                <button class="btn btn-sm btn-success me-2" ng-click="updateComment(comment)">Save</button>
+                <button class="btn btn-sm btn-secondary" ng-click="comment.isEditing = false">Cancel</button>
+              </div>
+            </div>            
+            
             <p ng-if="comments.length === 0" class="text-muted">No comments yet. Be the first to comment!</p>
           </div>                 
         </div>

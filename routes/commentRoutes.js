@@ -3,31 +3,35 @@ const router = express.Router();
 const db = require('../model/db');
 
 // Get comments for a specific media item by season
-router.get('/trends/:season/:mediaId/comments', (req, res) => {
+router.get('/trends/:season/:mediaId/comments', async (req, res) => {
     const { season, mediaId } = req.params;
+    const userId = req.session?.userId || null; // Ambil userId dari session
 
-    db.query(
-        `SELECT 
-            c.content, 
-            u.full_name AS user_name 
-        FROM 
-            comments c 
-        LEFT JOIN 
-            users u ON c.user_id = u.id
-        JOIN 
-            media_content m ON c.media_id = m.id
-        WHERE 
-            m.season = $1 AND c.media_id = $2`,
-        [season, mediaId],
-        (err, result) => {
-            if (err) {
-                console.error('Database query error:', err);
-                return res.status(500).json({ message: 'Error fetching comments.' });
-            }
-            res.json({ comments: result.rows });
-        }
-    );
+    try {
+        const result = await db.query(
+            `SELECT 
+                c.id,
+                c.content,
+                c.user_id,
+                u.full_name AS user_name
+             FROM 
+                comments c
+             LEFT JOIN 
+                users u ON c.user_id = u.id
+             JOIN 
+                media_content m ON c.media_id = m.id
+             WHERE 
+                m.season = $1 AND c.media_id = $2`,
+            [season, mediaId]
+        );
+
+        res.json({ comments: result.rows, userId });
+    } catch (err) {
+        console.error('Database query error:', err);
+        res.status(500).json({ message: 'Error fetching comments.' });
+    }
 });
+
 
 // Post a comment for a specific media item by season
 router.post('/trends/:season/:mediaId/comments', async (req, res) => {
@@ -63,5 +67,59 @@ router.post('/trends/:season/:mediaId/comments', async (req, res) => {
         res.status(500).json({ message: 'Error posting comment.' });
     }
 });
+
+router.put('/trends/:season/:mediaId/comments/:commentId', async (req, res) => {
+    const { commentId } = req.params;
+    const { content } = req.body;
+    const userId = req.session?.userId;
+
+    if (!content || content.trim() === '') {
+        return res.status(400).json({ message: 'Comment content cannot be empty.' });
+    }
+
+    try {
+        const result = await db.query(
+            `UPDATE comments 
+             SET content = $1 
+             WHERE id = $2 AND user_id = $3 
+             RETURNING content`,
+            [content, commentId, userId]
+        );
+
+        if (result.rowCount === 0) {
+            return res.status(403).json({ message: 'You can only edit your own comments.' });
+        }
+
+        res.json({ message: 'Comment updated successfully.' });
+    } catch (err) {
+        console.error('Error updating comment:', err);
+        res.status(500).json({ message: 'Error updating comment.' });
+    }
+});
+
+
+router.delete('/trends/:season/:mediaId/comments/:commentId', async (req, res) => {
+    const { commentId } = req.params;
+    const userId = req.session?.userId;
+
+    try {
+        const result = await db.query(
+            `DELETE FROM comments 
+             WHERE id = $1 AND user_id = $2`,
+            [commentId, userId]
+        );
+
+        if (result.rowCount === 0) {
+            return res.status(403).json({ message: 'You can only delete your own comments.' });
+        }
+
+        res.json({ message: 'Comment deleted successfully.' });
+    } catch (err) {
+        console.error('Error deleting comment:', err);
+        res.status(500).json({ message: 'Error deleting comment.' });
+    }
+});
+
+
 
 module.exports = router;
