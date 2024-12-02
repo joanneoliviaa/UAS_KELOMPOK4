@@ -25,7 +25,7 @@ router.get('/api/news', async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {
-  res.render('articles', { activePage: '/news' }); 
+  res.render('articles'); 
 });
 
 router.get('/api/news/:id', async (req, res) => {

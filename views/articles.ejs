@@ -1,67 +1,109 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ news.title }}</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
-  <link rel="stylesheet" href="/css/articles.css">
-  <script src="/angular/app.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Article</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/articles.css">
 </head>
-<body ng-controller="articleController">
-    <%- include('partials/header') %>
+<body>
 
-    <!-- Artikel Konten -->
-    <div class="container mt-4">
-        <!-- Jika ada artikel, tampilkan -->
-        <div ng-if="news">
-            <h1>{{ news.title }}</h1>
-            <img ng-if="news.image_url" ng-src="{{ news.image_url }}" alt="{{ news.title }}" class="img-fluid mb-3">
-            <p>{{ news.full_article }}</p>
+    <!-- Article Section -->
+    <section class="article">
+        <div class="article-header">
+            <h1>The Best Front Row Style <br>From New York Fashion Week</h1>
+            <p class="author">By Christian Allaire</p>
+            <p class="release-date">September 18, 2024</p>
+        </div>
+        <div class="article-image">
+            <img src="/img/articles/art1.jpeg" alt="The Best Front Row Style From New York Fashion Week">
+            <figcaption>Photo: Getty Images</figcaption>
+        </div>
+        <div class="article-content">
+            <p>
+                New York Fashion Week is not just a showcase of cutting-edge designs on the runway; it’s also a platform for the fashion elite to flaunt their personal style. The front row, where celebrities, influencers, and fashion icons sit, has become a stage for standout fashion moments that often rival the collections themselves. Here's a roundup of the most memorable front row styles that graced NYFW this season.
+            </p>
+            <p><b>1. Bold and Bright: Zendaya</b></p>
+            <p>
+                Zendaya continued to impress with her fashion-forward choices, stepping out in a striking neon green ensemble that commanded attention. Her outfit, a structured mini dress paired with knee-high boots, was a vibrant testament to her fearless fashion sense. The look was completed with minimal accessories, allowing the bold color and clean lines to take center stage.
+            </p>
+            <p><b>2. Classic Elegance: Anna Wintour</b></p>
+            <p>
+                As the epitome of fashion authority, Anna Wintour’s front row presence is always anticipated. This season, she opted for a classic look with a modern twist, wearing a tailored trench coat in a deep navy hue. Her signature bob and dark sunglasses added an air of timeless sophistication to her outfit, reinforcing her status as a fashion icon.
+            </p>
+            <p><b>3. Edgy Chic: Billie Eilish</b></p>
+            <p>
+                Billie Eilish brought her signature edgy style to the front row with a monochromatic black outfit that showcased her unique fashion sense. The oversized trench coat, paired with baggy trousers and chunky combat boots, created a cool and laid-back look. Eilish’s layered jewelry and bold makeup completed her statement look.
+            </p>
+            <p><b>4. Glamorous and Glitzy: Rihanna</b></p>
+            <p>
+                Rihanna never fails to deliver when it comes to high fashion. At this year’s NYFW, she wowed onlookers with a dazzling sequin gown that shimmered under the lights. The deep plunge neckline and thigh-high slit added a touch of allure, while her impeccable styling—complete with dramatic earrings and a sleek updo—elevated the entire ensemble.
+            </p>
+            <p><b>5. Minimalist Cool: Harry Styles</b></p>
+            <p>
+                Harry Styles, known for his eclectic fashion sense, opted for a minimalist approach this season with a tailored suit in a soft pastel shade. The outfit was impeccably fitted, and the subtle color choice highlighted his refined yet relaxed style. Paired with simple accessories and his trademark bold rings, Styles showcased how less can be more.
+            </p>
+            <p><b>6. Sophisticated Edge: Gigi Hadid</b></p>
+            <p>
+                Model Gigi Hadid turned heads with a sophisticated yet edgy look, featuring a structured leather jacket over a sleek, body-hugging dress. The combination of the tough leather with the delicate dress created a striking contrast that perfectly highlighted Hadid’s effortless st
+            </p>
+            <p><b>7. Vintage Vibes: Tracee Ellis Ross</b></p>
+            <p>
+                Tracee Ellis Ross brought a touch of vintage glamour to the front row with a retro-inspired outfit that featured a chic, high-waisted skirt and a fitted blouse with puffed sleeves. The playful mix of patterns and textures showcased Ross’s love for vintage fashion, while her bold red lipstick and voluminous curls added a modern twist.
+            </p>
+            <p>
+                As New York Fashion Week continues to inspire and set trends, the front row remains a hotbed of fashion innovation and personal style. Each season, these standout looks from celebrities and fashion icons offer a glimpse into the ever-evolving world of high fashion and individual expression.
+            </p>
         </div>
 
-        <!-- Jika gagal mengambil artikel -->
-        <div ng-if="errorMessage" class="alert alert-danger">
-            {{ errorMessage }}
+        <div class="read-more">
+            <h2>READ MORE</h2>
+            <div class="related-articles">
+                <a href="/articles/art2.html" class="related-article">
+                    <img src="/img/articles/art2.jpg" alt="My (Brief) Life as a Show Dog for Rachel Antonoff and Susan Alexandra">
+                    <div class="article-info">
+                        <p class="title">My (Brief) Life as a Show Dog for Rachel Antonoff and Susan Alexandra</p>
+                        <p class="author">By Magnolia</p>
+                    </div>
+                </a>
+                <a href="/articles/art3.html" class="related-article">
+                    <img src="/img/articles/art3.jpg" alt="Ouch, My Back! The Worst Trend at NYFW Is the Backless Benches">
+                    <div class="article-info">
+                        <p class="title">Ouch, My Back! The Worst Trend at NYFW Is the Backless Benches</p>
+                        <p class="author">By Christian Allaire </p>
+                    </div>
+                </a>
+                <a href="/articles/art4.html" class="related-article">
+                    <img src="/img/articles/art4.jpg" alt="Aboard the U.S.S. SNL for Tommy Hilfiger">
+                    <div class="article-info">
+                        <p class="title">Aboard the U.S.S. SNL for Tommy Hilfiger</p>
+                        <p class="author">By Hannah Jackson </p>
+                    </div>
+                </a>
+                <a href="/articles/art5.html" class="related-article">
+                    <img src="/img/articles/art5.jpg" alt="How Editors, Models and More Styled Their White Tees at the Fashion for Our Future March">
+                    <div class="article-info">
+                        <p class="title">How Editors, Models and More Styled Their White Tees at the Fashion for Our Future March</p>
+                        <p class="author">By Leah Faye Cooper</p>
+                    </div>
+                </a>
+            </div>
         </div>
+    </section>
 
-        <a href="/news" class="btn btn-secondary">Back to News</a>
-    </div>      
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Lifestyle Website. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
 
-    <script>
-      angular.module('app', ['ngRoute'])  // Menambahkan 'ngRoute' ke dalam array dependensi
-      .config(function($routeProvider) {
-        $routeProvider
-        .when('/news/:id', {  // Menggunakan parameter ':id' untuk artikel
-        templateUrl: '/path/to/articles.ejs',  // Path template artikel
-        controller: 'articleController'  // Menambahkan controller artikel
-        })
-        .otherwise({
-          redirectTo: '/news'
-        });
-      });
-
-    </script>
-
-    <!-- Sertakan controller JavaScript -->
-    <script>
-      angular.module('app')
-      .controller('articleController', function($scope, $http, $routeParams) {
-        // Mendapatkan ID artikel dari URL
-        const articleId = $routeParams.id;  // Mengambil parameter 'id' dari URL
-        
-        // Mengambil data artikel dari API
-        $http.get(`/news/api/news/${articleId}`)
-        .then(function(response) {
-          $scope.news = response.data;  // Menyimpan data artikel ke scope
-          })
-          .catch(function(error) {
-            console.error('Error loading article:', error);
-            $scope.errorMessage = 'Failed to load article'; // Menampilkan pesan error jika gagal
-            });
-          });
-          </script>
+    <script src="articles.js"></script>
 </body>
 </html>
