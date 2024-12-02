@@ -17,22 +17,22 @@ const signup = async (req, res) => {
 
   // Validate all input fields
   if (!full_name || !dob || !email || !password || !confirmPassword) {
-    return res.status(400).json({ message: 'All fields are required' });
+    return res.send(`<script>alert('All fields are required'); window.history.back();</script>`);
   }
 
   // Check if passwords match
   if (password !== confirmPassword) {
-    return res.status(400).json({ message: 'Passwords do not match' });
+    return res.send(`<script>alert('Passwords do not match'); window.history.back();</script>`);
   }
 
   if (isAtLeast10YearsOld(dob) < 10) {
-    return res.status(400).json({ message: 'You must be at least 10 years old to sign up' });
+    return res.send(`<script>alert('You must be at least 10 years old to sign up'); window.history.back();</script>`);
   }
 
   // Check if email already exists
   const existingUser = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
   if (existingUser.rows.length > 0) {
-    return res.status(400).json({ message: 'Email is already registered' });
+    return res.send(`<script>alert('Email is already registered'); window.history.back();</script>`);
   }
 
   try {
@@ -64,13 +64,13 @@ const signin = async (req, res) => {
     const user = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
     if (user.rows.length === 0) {
       // Invalid credentials, redirect to signin with error message
-      return res.render('signin', { message: 'Invalid email or password', activePage: '/signin' });
+      return res.render('signin', { message: 'Invalid credentials', activePage: '/signin' });
     }
 
     // Compare the entered password with the stored password (plaintext comparison)
     if (password !== user.rows[0].password) {
       // Invalid credentials, redirect to signin with error message
-      return res.render('signin', { message: 'Invalid email or password', activePage: '/signin' });
+      return res.render('signin', { message: 'Invalid credentials', activePage: '/signin' });
     }
 
     // If credentials are valid, save session and redirect
