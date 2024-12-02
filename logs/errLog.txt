@@ -5549,3 +5549,30 @@ total is not defined
     55| </section>
 
 total is not defined
+20241202	13:35:40	63e6398d-31f3-43bb-8210-dbbbb648ce41	TypeError: C:\BUAT KULIAH\Frontend\UAS_KEL4\UAS_KELOMPOK4\views\shop\cart.ejs:32
+    30|                     <tr class="cart-item">
+    31|                         <td class="cart-item-data"><%= item.product_name %></td>
+ >> 32|                         <td class="cart-item-data">$<%= item.product_price.toFixed(2) %></td>
+    33|                         <td class="cart-item-data"><%= item.quantity %></td>
+    34|                         <td class="cart-item-data">$<%= (item.product_price * item.quantity).toFixed(2) %></td>
+    35|                     </tr>
+
+item.product_price.toFixed is not a function
+20241202	13:35:56	d0240319-01fd-4b73-b8f7-719ac20d87a8	TypeError: C:\BUAT KULIAH\Frontend\UAS_KEL4\UAS_KELOMPOK4\views\shop\cart.ejs:32
+    30|                     <tr class="cart-item">
+    31|                         <td class="cart-item-data"><%= item.product_name %></td>
+ >> 32|                         <td class="cart-item-data">$<%= item.product_price.toFixed(2) %></td>
+    33|                         <td class="cart-item-data"><%= item.quantity %></td>
+    34|                         <td class="cart-item-data">$<%= (item.product_price * item.quantity).toFixed(2) %></td>
+    35|                     </tr>
+
+item.product_price.toFixed is not a function
+20241202	13:35:59	06779a7a-8991-476e-964d-2cdfb38a7ab0	TypeError: C:\BUAT KULIAH\Frontend\UAS_KEL4\UAS_KELOMPOK4\views\shop\cart.ejs:32
+    30|                     <tr class="cart-item">
+    31|                         <td class="cart-item-data"><%= item.product_name %></td>
+ >> 32|                         <td class="cart-item-data">$<%= item.product_price.toFixed(2) %></td>
+    33|                         <td class="cart-item-data"><%= item.quantity %></td>
+    34|                         <td class="cart-item-data">$<%= (item.product_price * item.quantity).toFixed(2) %></td>
+    35|                     </tr>
+
+item.product_price.toFixed is not a function

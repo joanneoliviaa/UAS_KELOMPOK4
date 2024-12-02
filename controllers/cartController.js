@@ -8,20 +8,21 @@ const getCartItems = async (req, res) => {
     }
 
     try {
-        // Ambil semua item di cart untuk user ini
-        const result = await pool.query('SELECT * FROM cart WHERE user_id = $1', [userId]);
+        // Ambil semua item di cart untuk user ini dengan join ke tabel products
+        const result = await pool.query(`
+            SELECT c.*, p.name AS product_name, p.price AS product_price 
+            FROM cart c 
+            JOIN products p ON c.product_id = p.id 
+            WHERE c.user_id = $1`, [userId]);
+        
         const cartItems = result.rows;
 
         // Hitung total harga
         let total = 0;
 
-        // Mengambil harga untuk setiap item di cart
+        // Menghitung total berdasarkan harga produk dan kuantitas
         for (const item of cartItems) {
-            const productResult = await pool.query('SELECT price FROM products WHERE id = $1', [item.product_id]);
-            if (productResult.rowCount > 0) {
-                const productPrice = productResult.rows[0].price;
-                total += productPrice * item.quantity; // Menghitung total
-            }
+            total += item.product_price * item.quantity; // Menghitung total
         }
 
         // Render view cart dengan cartItems dan total
