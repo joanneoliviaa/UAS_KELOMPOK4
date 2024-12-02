@@ -221,6 +221,38 @@ form {
     background-color: var(--hover-colour);
 }
 
+.button-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.checkout-button {
+    background-color: #725b36; 
+    color: white;
+    border: none; 
+    padding: 12px 24px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 30px; 
+    cursor: pointer; 
+    transition: background 0.3s ease; 
+}
+
+.back-to-shopping-button{
+    background-color: #725b36; 
+    color: white;
+    border: none; 
+    padding: 1px 24px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 30px; 
+    cursor: pointer; 
+    transition: background 0.3s ease;
+}
+
 /* Footer Section */
 footer {
     padding: 30px 20px;

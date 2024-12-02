@@ -56,7 +56,12 @@
         Total: $<%= total %>
     </div>
 </div>
-   <a href="/indexshop" class="btn btn-primary">Back to Shopping</a>
+<div class="button-container">
+    <a href="/indexshop" class="btn back-to-shopping-button">Back to Shopping</a>
+    <form action="/cart/checkout" method="POST" class="checkout-form">
+        <button type="submit" class="btn checkout-button">Checkout</button>
+    </form>
+</div>
 
 
 

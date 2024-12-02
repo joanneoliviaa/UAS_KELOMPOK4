@@ -26,7 +26,7 @@ const getCartItems = async (req, res) => {
         }
 
         // Render view cart dengan cartItems dan total
-        res.render('shop/cart', { cartItems, total });
+        res.render('shop/cart', { cartItems, total});
     } catch (error) {
         console.error('Error fetching cart items:', error);
         res.status(500).json({ message: 'Error fetching cart items' });

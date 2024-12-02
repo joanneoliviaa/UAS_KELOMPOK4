@@ -126,4 +126,24 @@ router.post('/auth/update-password', async (req, res) => {
 
   // Rute untuk delete item
   router.post('/cart/delete/:productId', deleteCartItem);
+
+  // Rute untuk checkout
+router.post('/cart/checkout', async (req, res) => {
+  const userId = req.session.userId;
+
+  if (!userId) {
+      return res.status(401).json({ message: 'User  not logged in' });
+  }
+
+  try {
+      // Hapus semua item di cart untuk user ini
+      await pool.query('DELETE FROM cart WHERE user_id = $1', [userId]);
+
+      // Redirect kembali ke halaman cart dengan pesan sukses
+      res.redirect('/indexshop?message=Thank you for shopping');
+  } catch (error) {
+      console.error('Error during checkout:', error);
+      res.status(500).json({ message: 'Error during checkout' });
+  }
+});
 module.exports = router;

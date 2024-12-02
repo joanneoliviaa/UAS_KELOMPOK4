@@ -5576,3 +5576,21 @@ item.product_price.toFixed is not a function
     35|                     </tr>
 
 item.product_price.toFixed is not a function
+20241202	21:20:10	3163efdc-6b4d-4c13-95db-9ad162332b20	ReferenceError: C:\BUAT KULIAH\Frontend\UAS_KEL4\UAS_KELOMPOK4\views\shop\cart.ejs:91
+    89|         </script>
+    90| 
+ >> 91| <% if (req.query.message) { %>
+    92|     <script>
+    93|         alert("<%= req.query.message %>");
+    94|     </script>
+
+req is not defined
+20241202	21:22:28	d873d8c6-d8a1-462d-ace8-6e461269ed76	ReferenceError: C:\BUAT KULIAH\Frontend\UAS_KEL4\UAS_KELOMPOK4\views\shop\cart.ejs:91
+    89|         </script>
+    90| 
+ >> 91| <% if (req.query.message) { %>
+    92|     <script>
+    93|         alert("<%= req.query.message %>");
+    94|     </script>
+
+req is not defined
