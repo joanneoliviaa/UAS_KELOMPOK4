@@ -36,13 +36,11 @@ const signup = async (req, res) => {
   }
 
   try {
-    // Insert the new user into the database without hashing the password
     await pool.query(
       'INSERT INTO users (full_name, dob, email, password) VALUES ($1, $2, $3, $4)',
       [full_name, dob, email, password] 
     );
 
-    // After successful sign-up, redirect to the index page
     res.redirect('/'); 
   } catch (err) {
     console.error(err.message);
@@ -63,13 +61,11 @@ const signin = async (req, res) => {
     // Check if user exists in the database
     const user = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
     if (user.rows.length === 0) {
-      // Invalid credentials, redirect to signin with error message
       return res.render('signin', { message: 'Invalid credentials', activePage: '/signin' });
     }
 
     // Compare the entered password with the stored password (plaintext comparison)
     if (password !== user.rows[0].password) {
-      // Invalid credentials, redirect to signin with error message
       return res.render('signin', { message: 'Invalid credentials', activePage: '/signin' });
     }
 
