@@ -92,30 +92,7 @@ router.post('/auth/update-password', async (req, res) => {
   // Route untuk mengambil semua produk
   router.get('/indexshop', getAllProducts); // Menggunakan controller untuk mendapatkan produk
 
-  // Rute untuk menambahkan produk ke cart
-  router.post('/cart/add', async (req, res) => {
-    const { productId } = req.body;
-    const userId = req.session.userId; // Ambil userId dari session jika ada
-
-    if (!userId) {
-        return res.status(401).json({ message: 'User  not logged in' });
-    }
-
-    try {
-        // Tambahkan produk ke tabel cart
-        const result = await db.query(
-            'INSERT INTO cart (user_id, product_id) VALUES ($1, $2)',
-            [userId, productId]
-        );
-
-        res.redirect('/cart'); // Redirect ke halaman cart setelah menambahkan
-    } catch (error) {
-        console.error('Error adding product to cart:', error);
-        res.status(500).json({ message: 'Error adding product to cart' });
-    }
-  });
-
-    // Rute untuk menampilkan cart
+  // Rute untuk menampilkan cart
   router.get('/cart', getCartItems);
 
   // Rute untuk menambahkan produk ke cart

@@ -197,6 +197,29 @@ nav a:hover::after {
     background-color: var(--hover-colour);
 }
 
+.cart-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #725b36; 
+    color: white; 
+    padding: 10px 20px; /* Padding tombol */
+    border-radius: 5px; 
+    text-decoration: none; 
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.cart-button:hover {
+    background-color: #ad8d59; /* Warna saat hover */
+}
+
+.cart-icon {
+    width: 20px; /* Ukuran ikon */
+    height: auto; /* Otomatis menyesuaikan tinggi */
+    margin-right: 8px; /* Jarak antara ikon dan teks */
+}
+
 /* Footer Section */
 footer {
     padding: 30px 20px;

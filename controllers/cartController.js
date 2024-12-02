@@ -98,7 +98,7 @@ const addItemToCart = async (req, res) => {
 
     try {
         // Cek apakah item sudah ada di cart
-        const existingItem = await db.query(
+        const existingItem = await pool.query(
             'SELECT * FROM cart WHERE user_id = $1 AND product_id = $2',
             [userId, productId]
         );
@@ -118,7 +118,7 @@ const addItemToCart = async (req, res) => {
             );
         }
 
-        res.redirect('/cart'); // Redirect ke halaman cart setelah menambahkan
+        res.redirect('/indexshop'); // Redirect ke halaman cart setelah menambahkan
     } catch (error) {
         console.error('Error adding product to cart:', error);
         res.status(500).json({ message: 'Error adding product to cart' });
