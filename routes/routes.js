@@ -16,7 +16,7 @@ router.post('/data', addData);
 
 // POST: Delete Account
 router.post('/auth/delete-account', async (req, res) => {
-    const userId = req.session.userId; // Ambil userId dari session
+    const userId = req.session.userId;
   
     if (!userId) {
       return res.status(401).json({ message: 'User not logged in' });
@@ -45,8 +45,8 @@ router.post('/auth/delete-account', async (req, res) => {
 
 router.post('/auth/update-password', async (req, res) => {
     try {
-      const userId = req.session.userId;  // Dapatkan userId dari session
-      const { oldPassword, newPassword, confirmPassword } = req.body;  // Ambil data dari request
+      const userId = req.session.userId;  
+      const { oldPassword, newPassword, confirmPassword } = req.body; 
   
       if (!userId) {
         return res.status(400).json({ message: 'User not logged in' });
@@ -75,7 +75,7 @@ router.post('/auth/update-password', async (req, res) => {
   
       // Update password baru di PostgreSQL
       const updateQuery = 'UPDATE users SET password = $1 WHERE id = $2 RETURNING *';
-      const updateValues = [newPassword, userId]; // Menggunakan password baru
+      const updateValues = [newPassword, userId]; 
       const updateResult = await db.query(updateQuery, updateValues);
   
       if (updateResult.rowCount === 0) {
@@ -90,7 +90,7 @@ router.post('/auth/update-password', async (req, res) => {
   });
 
   // Route untuk mengambil semua produk
-  router.get('/indexshop', getAllProducts); // Menggunakan controller untuk mendapatkan produk
+  router.get('/indexshop', getAllProducts);
 
   // Rute untuk menampilkan cart
   router.get('/cart', getCartItems);
@@ -113,10 +113,8 @@ router.post('/cart/checkout', async (req, res) => {
   }
 
   try {
-      // Hapus semua item di cart untuk user ini
+      // Hapus semua item di cart untuk user 
       await pool.query('DELETE FROM cart WHERE user_id = $1', [userId]);
-
-      // Redirect kembali ke halaman cart dengan pesan sukses
       res.redirect('/indexshop?message=Thank you for shopping');
   } catch (error) {
       console.error('Error during checkout:', error);
