@@ -70,8 +70,7 @@ app.use('/news', newsRoutes);
 app.get('/profile', (req, res) => {
   // Check if the user is logged in by checking the session
   if (req.session && req.session.userId) {
-      // If logged in, render the profile page (e.g., profile.ejs or a static HTML page)
-      res.render('profile');  // Assuming you're using EJS or a similar template engine
+      res.render('profile'); 
   } else {
       // If not logged in, redirect to the sign-in page
       res.redirect('/auth/signin');
