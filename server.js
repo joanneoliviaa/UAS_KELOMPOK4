@@ -13,6 +13,7 @@ const bodyParser = require('body-parser');
 const mediaRoutes = require('./routes/mediaRoutes');
 const mediaController = require('./controllers/mediaController'); 
 const newsRoutes = require('./routes/newsRoutes');
+const commentRoutes = require('./routes/commentRoutes');
 const productRoutes = require('./routes/routes');
 const cartRoutes = require('./routes/routes');
 const PORT = process.env.PORT || 3500;
@@ -66,6 +67,8 @@ app.get('/trends/:season', mediaController.renderTrendsPage);
 app.use('/trends', mediaRoutes); 
 
 app.use('/news', newsRoutes);
+
+app.use('/api', commentRoutes);
 
 app.get('/profile', (req, res) => {
   // Check if the user is logged in by checking the session
