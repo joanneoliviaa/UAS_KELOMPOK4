@@ -11,61 +11,20 @@
 <body>
     <%- include('../../partials/header') %>
 
-    <!--Back Button-->
-    <a href="/trends" class="circle-btn">
-        <i class="fas fa-arrow-left"></i> 
-    </a>
+        <!-- Gallery Section -->
+  <div class="container mt-4">
+    <div class="gallery">
+      <% media.forEach(item => { %>
+        <div class="gallery-item">
+          <a href="/trends/spring/<%= item.id %>" style="text-decoration: none;">
+            <img src="<%= item.url %>" alt="<%= item.title %>">
+            <div class="title"><%= item.title %></div>
+          </a>
+        </div>
+      <% }) %>
+    </div>
+  </div>
 
-    <main class="grid-container">
-        <div class="grid-item">
-            <img src="/img/trends/spring/spring1.jpg" alt="Image 1">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/spring/spring2.png" alt="Image 2">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/spring/spring3.png" alt="Image 3">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/spring/spring4.png" alt="Image 4">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/spring/spring5.png" alt="Image 5">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/spring/spring6.png" alt="Image 6">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/spring/spring7.png" alt="Image 7">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/spring/spring8.png" alt="Image 8">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/spring/spring9.png" alt="Image 9">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/spring/spring10.png" alt="Image 10">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/spring/spring11.jpg" alt="Image 11">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/spring/spring12.jpg" alt="Image 12">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/spring/spring13.jpg" alt="Image 13">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/spring/spring14.jpg" alt="Image 14">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/spring/spring15.jpg" alt="Image 15">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/spring/spring16.jpg" alt="Image 16">
-        </div>
-    </main>
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Lifestyle Website. All rights reserved.</p>

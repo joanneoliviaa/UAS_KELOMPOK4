@@ -11,61 +11,19 @@
 <body>
     <%- include('../../partials/header') %>
 
-   <!--Back Button-->
-   <a href="/trends" class="circle-btn">
-    <i class="fas fa-arrow-left"></i> 
-</a>
-
-    <main class="grid-container">
-        <div class="grid-item">
-            <img src="/img/trends/summer/summer1.png" alt="Image 1">
+       <!-- Gallery Section -->
+  <div class="container mt-4">
+    <div class="gallery">
+      <% media.forEach(item => { %>
+        <div class="gallery-item">
+          <a href="/trends/summer/<%= item.id %>" style="text-decoration: none;">
+            <img src="<%= item.url %>" alt="<%= item.title %>">
+            <div class="title"><%= item.title %></div>
+          </a>
         </div>
-        <div class="grid-item">
-            <img src="/img/trends/summer/summer3.jpg" alt="Image 2">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/summer/summer2.jpg" alt="Image 3">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/summer/summer4.jpg" alt="Image 4">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/summer/summer5.jpg" alt="Image 5">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/summer/summer6.jpg" alt="Image 6">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/summer/summer7.jpg" alt="Image 7">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/summer/summer8.jpg" alt="Image 8">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/summer/summer9.jpg" alt="Image 9">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/summer/summer10.jpg" alt="Image 10">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/summer/summer11.jpg" alt="Image 11">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/summer/summer12.jpg" alt="Image 12">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/summer/summer13.jpg" alt="Image 13">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/summer/summer14.jpg" alt="Image 14">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/summer/summer15.jpg" alt="Image 15">
-        </div>
-        <div class="grid-item">
-            <img src="/img/trends/summer/summer16.jpg" alt="Image 16">
-        </div>
-    </main>
+      <% }) %>
+    </div>
+  </div>
 
     <!-- Footer Section -->
     <footer>
