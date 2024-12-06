@@ -20,13 +20,21 @@ Query Table untuk Pengujian Website :
 );
 - comments :
   CREATE TABLE comments (
-  id SERIAL PRIMARY KEY,
-  season VARCHAR(50) NOT NULL,
-  media_id INT NOT NULL,
-  user_id INT NOT NULL,
-  content TEXT NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (user_id) REFERENCES users(id) );
+    id SERIAL PRIMARY KEY, -- Primary key with auto-increment
+    media_id INTEGER NOT NULL, -- Foreign key referencing media_content
+    user_id INTEGER NOT NULL, -- Foreign key referencing users
+    content TEXT NOT NULL, -- Comment content
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Creation timestamp
+    season VARCHAR(50), -- Optional season information
+    CONSTRAINT comments_media_id_fkey FOREIGN KEY (media_id)
+        REFERENCES public.media_content (id)
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE,
+    CONSTRAINT comments_user_id_fkey FOREIGN KEY (user_id)
+        REFERENCES public.users (id)
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE
+);
 - products :
   CREATE TABLE products (
     id SERIAL PRIMARY KEY,
@@ -86,4 +94,4 @@ VALUES
 Just last season, celebs like Chloë Sevigny, Danai Gurira, Alexa Chung, and Katie Holmes were spotted wearing stylish looks from their prime VIP seats. Seeing which stars come out—and getting a glimpse of what they decide to wear—is half the fun of showing up to a presentation, no? Its a prime opportunity for star gazing Below, see the best front-row looks thus far, and check back for more as well be updating our stylish sightings in real time.', 'https://assets.vogue.com/photos/66e06853c6806a74745d4a5a/16:9/w_1920%2Cc_limit/GettyImages-2171073041.jpg', CURRENT_TIMESTAMP),
 ('All Aboard the U.S.S. SNL for Tommy Hilfiger', 'Hannah Jackson', 'One man’s $280,100 money pit is another’s ideal fashion show venue! Tonight, for his spring 2025 show, Tommy Hilfiger brought guests aboard New York’s hottest club, the decommissioned Staten Island Ferry, which was recently purchased by SNL’s Colin Jost and alum Pete Davidson. (“Hey man, is this your boat?” one attendee asked Jost shortly before the show began.)','https://assets.vogue.com/photos/66de4a682ba99449ac3dd549/master/w_1600,c_limit/2170269505', CURRENT_TIMESTAMP),
 ('My (Brief) Life as a Show Dog for Rachel Antonoff and Susan Alexandra', 'Magnolia', 'People think we are color blind. This is not so. Canines can, in fact, see color; we have two cones in our eyes that detect yellow and blue. (It’s called dichromatic vision, those with thumbs can google it.) You humans have three cones, the third allowing you to distinguish red and green. Personally, the omission of Christmas colors doesn’t affect me greatly. I don’t care about the hue of the grass where I relieve myself; I don’t care if prosciutto loses its rosy luster, as long as it’s thinly sliced and there’s plenty of it. Like Shakespeare said, a rose by any other name is still as sweet. (That said, TBH I don’t love Shakespeare. Only one dog features in the entirety of his oeuvre and he’s a whelp named Crab in Two Gentlemen of Verona who doesn’t get much airtime and belongs to a servant rather than either of the titular gentlemen…but I digress.)', 'https://assets.vogue.com/photos/66dc9b33fa5235bee879400f/16:9/w_1600%2Cc_limit/SUSANALEXANDRA_SS25_BACKSTAGE_HUNTERABRAMS_01.jpg', CURRENT_TIMESTAMP),
-	('Ouch, My Back! The Worst Trend at NYFW Is the Backless Benches', 'Christian Allaire', 'People think we are color blind. This is not so. Canines can, in fact, see color; we have two cones in our eyes that detect yellow and blue. (It’s called dichromatic vision, those with thumbs can google it.) You humans have three cones, the third allowing you to distinguish red and green. Personally, the omission of Christmas colors doesn’t affect me greatly. I don’t care about the hue of the grass where I relieve myself; I don’t care if prosciutto loses its rosy luster, as long.', 'https://assets.vogue.com/photos/66df4ef52f612140712fd4c4/master/w_1600,c_limit/IMG_1800.jpeg', CURRENT_TIMESTAMP);DEFAULT CURRENT_TIMESTAMP );
+	('Ouch, My Back! The Worst Trend at NYFW Is the Backless Benches', 'Christian Allaire', 'People think we are color blind. This is not so. Canines can, in fact, see color; we have two cones in our eyes that detect yellow and blue. (It’s called dichromatic vision, those with thumbs can google it.) You humans have three cones, the third allowing you to distinguish red and green. Personally, the omission of Christmas colors doesn’t affect me greatly. I don’t care about the hue of the grass where I relieve myself; I don’t care if prosciutto loses its rosy luster, as long.', 'https://assets.vogue.com/photos/66df4ef52f612140712fd4c4/master/w_1600,c_limit/IMG_1800.jpeg', CURRENT_TIMESTAMP);
